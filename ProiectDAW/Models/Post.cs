@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Text.RegularExpressions;
+﻿
+using System.ComponentModel.DataAnnotations;
+
 
 namespace ProiectDAW.Models
 {
@@ -13,7 +14,7 @@ namespace ProiectDAW.Models
         [Required]
         public int Likes { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int? GroupId { get; set; }
 
         public virtual ICollection<Comment>? Comments { get; set; }
@@ -21,8 +22,8 @@ namespace ProiectDAW.Models
         [Required]
         public virtual ICollection<PostLocation> PostLocations { get; set; }
         public virtual ICollection<PostLike>? PostLikes { get; set; }
-        //public virtual User User { get; set; }
-        //public virtual Group? Group { get; set; }
+        public virtual User User { get; set; }
+        public virtual Group? Group { get; set; }
 
     }
 }

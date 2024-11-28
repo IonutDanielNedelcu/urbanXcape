@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace ProiectDAW.Models
 {
@@ -13,11 +14,13 @@ namespace ProiectDAW.Models
         [Required]
         public int Likes { get; set; }
         [Required]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         [Required]
         public int PostId { get; set; }
         [Required]
         public virtual Post Post { get; set; }
-        //public virtual User User { get; set; }
+        public virtual User User { get; set; }
+
+        public virtual ICollection<CommentLike>? CommentLikes { get; set; }
     }
 }

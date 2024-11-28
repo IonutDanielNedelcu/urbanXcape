@@ -1,18 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BaseClasses.Models
+namespace ProiectDAW.Models
 {
-    [NotMapped]
+    
     public class FollowRequest
     {
         // Cheie primara compusa din IdFollower si IdFollowed
 
         [Required]
-        public int FollowerId { get; set; } // userul care a trimis cererea
+        public string FollowerId { get; set; } // userul care a trimis cererea
 
         [Required]
-        public int FollowedId { get; set; } // userul urmarit
+        public string FollowedId { get; set; } // userul urmarit
 
         [Required]
         public DateTime Date { get; set; }

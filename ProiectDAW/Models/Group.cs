@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
-namespace BaseClasses.Models
+namespace ProiectDAW.Models
 {
     public class Group
     {
@@ -12,10 +13,11 @@ namespace BaseClasses.Models
 
         public string? Description { get; set; }
 
-        public virtual User? ModeratorId { get; set; }
+        //public virtual User? ModeratorId { get; set; }
 
         public virtual ICollection<GroupRequest>? GroupRequests { get; set; }
 
         public virtual ICollection<UserGroup>? UserGroups { get; set; }
+        public virtual ICollection<Post>? Posts { get; set; }
     }
 }

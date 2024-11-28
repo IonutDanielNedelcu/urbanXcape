@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BaseClasses.Models
+namespace ProiectDAW.Models
 {
     public class City
     {

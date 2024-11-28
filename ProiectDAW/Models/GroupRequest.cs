@@ -1,12 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BaseClasses.Models
+namespace ProiectDAW.Models
 {
+    
     public class GroupRequest
     {
         // Cheie primara compusa din IdUser si IdGroup
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public int GroupId { get; set; }
 

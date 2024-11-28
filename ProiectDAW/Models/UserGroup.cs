@@ -1,8 +1,12 @@
-﻿namespace BaseClasses.Models
+﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProiectDAW.Models
 {
+    
     public class UserGroup
     {
-        public int? UserId { get; set; }
+        public string? UserId { get; set; }
 
         public int? GroupId { get; set; }
 
