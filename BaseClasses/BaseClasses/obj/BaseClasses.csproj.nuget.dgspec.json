@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\University\\An2Sem1\\DAW\\_PROIECT\\EtapeCod\\BaseClasses\\BaseClasses\\BaseClasses.csproj": {}
+    "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\BaseClasses\\BaseClasses\\BaseClasses.csproj": {}
   },
   "projects": {
-    "D:\\University\\An2Sem1\\DAW\\_PROIECT\\EtapeCod\\BaseClasses\\BaseClasses\\BaseClasses.csproj": {
+    "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\BaseClasses\\BaseClasses\\BaseClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\University\\An2Sem1\\DAW\\_PROIECT\\EtapeCod\\BaseClasses\\BaseClasses\\BaseClasses.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\BaseClasses\\BaseClasses\\BaseClasses.csproj",
         "projectName": "BaseClasses",
-        "projectPath": "D:\\University\\An2Sem1\\DAW\\_PROIECT\\EtapeCod\\BaseClasses\\BaseClasses\\BaseClasses.csproj",
-        "packagesPath": "C:\\Users\\nedel\\.nuget\\packages\\",
-        "outputPath": "D:\\University\\An2Sem1\\DAW\\_PROIECT\\EtapeCod\\BaseClasses\\BaseClasses\\obj\\",
+        "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\BaseClasses\\BaseClasses\\BaseClasses.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\BaseClasses\\BaseClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nedel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

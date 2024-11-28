@@ -41,33 +41,33 @@ namespace BaseClasses.Models
 
             // GroupRequest PK
             modelBuilder.Entity<GroupRequest>()
-                .HasKey(gr => new { gr.IdUser, gr.IdGroup });
+                .HasKey(gr => new { gr.UserId, gr.GroupId });
 
             // GroupRequest FK
             modelBuilder.Entity<GroupRequest>()
                 .HasOne(gr => gr.User)
                 .WithMany(gr => gr.GroupRequests)
-                .HasForeignKey(gr => gr.IdUser);
+                .HasForeignKey(gr => gr.UserId);
 
             modelBuilder.Entity<GroupRequest>()
                 .HasOne(gr => gr.Group)
                 .WithMany(gr => gr.GroupRequests)
-                .HasForeignKey(gr => gr.IdGroup);
+                .HasForeignKey(gr => gr.GroupId);
 
             // UserGroup PK
             modelBuilder.Entity<UserGroup>()
-                .HasKey(ug => new { ug.IdUser, ug.IdGroup });
+                .HasKey(ug => new { ug.UserId, ug.GroupId });
 
             // UserGroup FK
             modelBuilder.Entity<UserGroup>()
                 .HasOne(ug => ug.User)
                 .WithMany(ug => ug.UserGroups)
-                .HasForeignKey(ug => ug.IdUser);
+                .HasForeignKey(ug => ug.UserId);
 
             modelBuilder.Entity<UserGroup>()
                 .HasOne(ug => ug.Group)
                 .WithMany(ug => ug.UserGroups)
-                .HasForeignKey(ug => ug.IdGroup);
+                .HasForeignKey(ug => ug.GroupId);
         }
     }
 }

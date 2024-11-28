@@ -6,9 +6,9 @@ namespace BaseClasses.Models
     {
         // Cheie primara compusa din IdUser si IdGroup
 
-        public int IdUser { get; set; }
+        public int UserId { get; set; }
 
-        public int IdGroup { get; set; }
+        public int GroupId { get; set; }
 
         [Required]
         public DateTime Date { get; set; }

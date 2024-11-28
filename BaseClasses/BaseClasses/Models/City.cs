@@ -5,7 +5,7 @@ namespace BaseClasses.Models
     public class City
     {
         [Key]
-        public int IdCity { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }

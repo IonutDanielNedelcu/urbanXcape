@@ -9,10 +9,10 @@ namespace BaseClasses.Models
         // Cheie primara compusa din IdFollower si IdFollowed
 
         [Required]
-        public int IdFollower { get; set; } // userul care a trimis cererea
+        public int FollowerId { get; set; } // userul care a trimis cererea
 
         [Required]
-        public int IdFollowed { get; set; } // userul urmarit
+        public int FollowedId { get; set; } // userul urmarit
 
         [Required]
         public DateTime Date { get; set; }
