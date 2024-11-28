@@ -9,7 +9,7 @@ namespace ProiectDAW.Models
         [Required]
         public string Path { get; set; }
         [Required]
-        public int IdPost { get; set; }
+        public int PostId { get; set; }
         [Required]
         virtual public Post Post { get; set; }
     }

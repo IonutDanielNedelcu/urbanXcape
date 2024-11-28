@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kZdX5bMR6Rc=",
+  "dgSpecHash": "3KPJQrrxx74=",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Desktop\\PrDAW\\ProiectDAW\\ProiectDAW\\ProiectDAW.csproj",
+  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

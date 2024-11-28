@@ -5,9 +5,9 @@ namespace ProiectDAW.Models
     public class Rating
     {
         [Key]
-        public int IdUser { get; set; }
+        public int UserId { get; set; }
         [Required]
-        public int IdLocation { get; set; }
+        public int LocationId { get; set; }
         [Required]
         public int Grade { get; set; }
         public string? Text { get; set; }

@@ -4557,11 +4557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\PrDAW\\ProiectDAW\\ProiectDAW\\ProiectDAW.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
       "projectName": "ProiectDAW",
-      "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\PrDAW\\ProiectDAW\\ProiectDAW\\ProiectDAW.csproj",
+      "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\PrDAW\\ProiectDAW\\ProiectDAW\\obj\\",
+      "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

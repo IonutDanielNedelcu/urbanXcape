@@ -5,9 +5,9 @@ namespace ProiectDAW.Models
     public class PostLocation
     {
         [Required]
-        public int IdPost { get; set; }
+        public int PostId { get; set; }
         [Required]
-        public int IdLocation { get; set; }
+        public int LocationId { get; set; }
         [Required]
         public virtual Post Post { get; set; }
         [Required]

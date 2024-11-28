@@ -24,18 +24,18 @@ namespace ProiectDAW.Data
             base.OnModelCreating(modelBuilder);
             // definire primary key compus
             modelBuilder.Entity<PostLocation>()
-                .HasKey(pl => new {pl.IdPost, pl.IdLocation});//pl = o instanță a entității PostLocation (param de intrare)
+                .HasKey(pl => new {pl.PostId, pl.LocationId});//pl = o instanță a entității PostLocation (param de intrare)
                                                               //new {pl.IdPost, pl.IdLocation} = tip anonim (anonymous type) care conține valorile din proprietățile IdPost și IdLocation
             // definire relatii cu modelele Post si Location (FK)
             modelBuilder.Entity<PostLocation>()
                 .HasOne(pl => pl.Post)
                 .WithMany(pl => pl.PostLocations)
-                .HasForeignKey(pl => pl.IdPost);
+                .HasForeignKey(pl => pl.PostId);
 
             modelBuilder.Entity<PostLocation>()
                 .HasOne(pl => pl.Location)
                 .WithMany(pl => pl.PostLocations)
-                .HasForeignKey(pl => pl.IdLocation);
+                .HasForeignKey(pl => pl.LocationId);
 
 
             //modelBuilder.Entity<PostLike>()

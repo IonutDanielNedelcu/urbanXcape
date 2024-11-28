@@ -13,8 +13,8 @@ namespace ProiectDAW.Models
         [Required]
         public int Likes { get; set; }
         [Required]
-        public int IdUser { get; set; }
-        public int? IdGroup { get; set; }
+        public int UserId { get; set; }
+        public int? GroupId { get; set; }
 
         public virtual ICollection<Comment>? Comments { get; set; }
         public virtual ICollection<Media>? Media { get; set; }

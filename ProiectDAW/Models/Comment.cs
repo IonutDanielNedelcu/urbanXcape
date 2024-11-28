@@ -13,9 +13,9 @@ namespace ProiectDAW.Models
         [Required]
         public int Likes { get; set; }
         [Required]
-        public int IdUser { get; set; }
+        public int UserId { get; set; }
         [Required]
-        public int IdPost { get; set; }
+        public int PostId { get; set; }
         [Required]
         public virtual Post Post { get; set; }
         //public virtual User User { get; set; }
