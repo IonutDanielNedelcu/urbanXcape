@@ -1,13 +1,10 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\",
-<<<<<<< Updated upstream
-  "Documents": [],
-=======
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\data\\migrations\\20241128111244_modificarefk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\data\\migrations\\20241128111244_modificarefk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +39,6 @@
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
->>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -50,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,20 +55,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-<<<<<<< Updated upstream
-=======
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20241128111244_ModificareFK.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241128111244_ModificareFK.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Data\\Migrations\\20241128111244_ModificareFK.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241128111244_ModificareFK.cs",
-              "RelativeToolTip": "ProiectDAW\\Data\\Migrations\\20241128111244_ModificareFK.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\User.cs",
+              "RelativeToolTip": "ProiectDAW\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T11:12:44.414Z",
+              "WhenOpened": "2024-11-28T11:57:36.2Z",
               "EditorCaption": ""
             },
             {
@@ -170,7 +164,6 @@
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwB4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T10:39:32.553Z"
->>>>>>> Stashed changes
             }
           ]
         },
