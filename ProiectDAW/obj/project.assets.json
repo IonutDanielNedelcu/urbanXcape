@@ -8358,19 +8358,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {}
+    "C:\\Users\\nedel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
+      "projectUniqueName": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
       "projectName": "ProiectDAW",
-      "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\obj\\",
+      "projectPath": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
+      "packagesPath": "C:\\Users\\nedel\\.nuget\\packages\\",
+      "outputPath": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nedel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8452,7 +8452,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

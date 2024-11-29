@@ -523,10 +523,7 @@ namespace ProiectDAW.Data.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
-                    b.Property<bool>("Administrator")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("CityId")
+                    b.Property<int?>("CityId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -790,9 +787,7 @@ namespace ProiectDAW.Data.Migrations
                 {
                     b.HasOne("ProiectDAW.Models.City", "City")
                         .WithMany("Users")
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CityId");
 
                     b.Navigation("City");
                 });

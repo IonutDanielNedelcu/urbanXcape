@@ -29,15 +29,15 @@ namespace ProiectDAW.Models
         //public string Password { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         public string? ProfilePic { get; set; }
 
         [Required]
         public bool Privacy { get; set; }
 
-        [Required]
-        public bool Administrator { get; set; }
+        //[Required]
+        //public bool Administrator { get; set; }
 
         public int? CityId { get; set; }
         public virtual City? City { get; set; }
