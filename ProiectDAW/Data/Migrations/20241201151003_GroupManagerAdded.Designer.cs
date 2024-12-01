@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProiectDAW.Data;
 
@@ -11,9 +12,11 @@ using ProiectDAW.Data;
 namespace ProiectDAW.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241201151003_GroupManagerAdded")]
+    partial class GroupManagerAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -336,15 +339,14 @@ namespace ProiectDAW.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ModeratorId")
-                        .HasColumnType("nvarchar(450)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ModeratorId");
 
                     b.ToTable("Groups");
                 });
@@ -663,15 +665,6 @@ namespace ProiectDAW.Data.Migrations
                     b.Navigation("Followed");
 
                     b.Navigation("Follower");
-                });
-
-            modelBuilder.Entity("ProiectDAW.Models.Group", b =>
-                {
-                    b.HasOne("ProiectDAW.Models.User", "Moderator")
-                        .WithMany()
-                        .HasForeignKey("ModeratorId");
-
-                    b.Navigation("Moderator");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.GroupRequest", b =>

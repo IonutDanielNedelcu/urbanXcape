@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using System.Security.Claims
+@{
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+}
+@model ProiectDAW.Models.Group
+<br />
+
+<div class="container">
+    <button class="btn btn-success">
+        <a asp-controller="Groups" asp-action="Index" class="btn btn-success">Back to groups</a>
+    </button>
+</div>
+
+<br />
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Name</h3>
+        <br />
+        <p class="card-text">@Model.Description<p/>
+        <br />
+        <p class="card-text">Moderated by <a>@Model.Moderator.UserName</a></p>
+        <br />
+
+        @if (Model.ModeratorId == userId)
+        {
+            <button class="btn btn-success">
+                <a href="/Groups/Edit/@Model.Id" class="btn btn-success">Edit Group</a>
+            </button>
+            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this group?');">
+                <a href="/Groups/Delete/@Model.Id" class="btn btn-danger">Delete Group</a>
+            </button>
+        }
+
+    <div/>
+
+</div>
