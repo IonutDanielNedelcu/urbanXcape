@@ -10,7 +10,7 @@ namespace ProiectDAW.Models
 
         public int? GroupId { get; set; }
 
-        public virtual User? User { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 
         public virtual Group? Group { get; set; }
     }

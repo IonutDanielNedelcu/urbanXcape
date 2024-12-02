@@ -29,34 +29,40 @@ namespace ProiectDAW.Models
                 );
                 // o noua instanta pe care o vom utiliza pentru crearea parolelor utilizatorilor
                 // parolele sunt de tip hash
-                var hasher = new PasswordHasher<User>();
+                var hasher = new PasswordHasher<ApplicationUser>();
                 // CREAREA USERILOR IN BD
                 // Se creeaza cate un user pentru fiecare rol
                 context.Users.AddRange(
-                new User
+                new ApplicationUser
                 {
                     Id = "8e445865-a24d-4543-a6c6-9443d048cdb0", // primary key
                     UserName = "admin@test.com",
+                    FirstName = "Admin",
+                    LastName = "Test",
                     EmailConfirmed = true,
                     NormalizedEmail = "ADMIN@TEST.COM",
                     Email = "admin@test.com",
                     NormalizedUserName = "ADMIN@TEST.COM",
                     PasswordHash = hasher.HashPassword(null, "Admin1!")
                 },
-                new User
+                new ApplicationUser
                 {
                     Id = "8e445865-a24d-4543-a6c6-9443d048cdb1", // primary key
                     UserName = "editor@test.com",
+                    FirstName = "Editor",
+                    LastName = "Test",
                     EmailConfirmed = true,
                     NormalizedEmail = "EDITOR@TEST.COM",
                     Email = "editor@test.com",
                     NormalizedUserName = "EDITOR@TEST.COM",
                     PasswordHash = hasher.HashPassword(null, "Editor1!")
                 },
-                new User
+                new ApplicationUser
                 {
                     Id = "8e445865-a24d-4543-a6c6-9443d048cdb2", // primary key
                     UserName = "user@test.com",
+                    FirstName = "User",
+                    LastName = "Test",
                     EmailConfirmed = true,
                     NormalizedEmail = "USER@TEST.COM",
                     Email = "user@test.com",

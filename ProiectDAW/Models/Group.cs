@@ -16,7 +16,7 @@ namespace ProiectDAW.Models
         //[Required]
         public string? ModeratorId { get; set; }
 
-        public virtual User? Moderator { get; set; }
+        public virtual ApplicationUser? Moderator { get; set; }
 
         public virtual ICollection<GroupRequest>? GroupRequests { get; set; }
 

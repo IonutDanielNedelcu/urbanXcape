@@ -4,10 +4,10 @@ using ProiectDAW.Models;
 
 namespace ProiectDAW.Controllers
 {
-    public class UserController : Controller
+    public class ApplicationUserController : Controller
     {
         private readonly ApplicationDbContext db;
-        public UserController(ApplicationDbContext _db)
+        public ApplicationUserController(ApplicationDbContext _db)
         {
             db = _db;
         }
@@ -18,8 +18,9 @@ namespace ProiectDAW.Controllers
 
         public IActionResult Show(string id)
         {
-            User? user = db.Users.Find(id);
-            return View(user);
+            // ApplicationUser? user = db.ApplicationUsers.Find(id);
+            //return View(user);
+            return View();
         }
     }
 }

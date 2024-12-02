@@ -1,4 +1,5 @@
 ﻿using Humanizer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProiectDAW.Data;
@@ -11,6 +12,7 @@ namespace ProiectDAW.Controllers
     {
         private readonly ApplicationDbContext db;
 
+        private readonly UserManager<ApplicationUser> _userManager;
         public GroupsController(ApplicationDbContext context)
         {
             db = context;
@@ -60,7 +62,7 @@ namespace ProiectDAW.Controllers
         public IActionResult New(Group group)
         {
             // Assuming you have a way to get the current user's ID
-            string currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string currentUserId = _userManager.GetUserId(User);
             group.ModeratorId = currentUserId;
 
             db.Groups.Add(group);
