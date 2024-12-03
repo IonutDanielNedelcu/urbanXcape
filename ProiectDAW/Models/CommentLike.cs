@@ -8,6 +8,6 @@ namespace ProiectDAW.Models
         public int CommentId { get; set; }
 
         public virtual Comment Comment { get; set; }
-        public virtual User User { get; set; }
+        public virtual ApplicationUser User { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace ProiectDAW.Models
         [Required]
         public virtual ICollection<PostLocation> PostLocations { get; set; }
         public virtual ICollection<PostLike>? PostLikes { get; set; }
-        public virtual User User { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public virtual Group? Group { get; set; }
 
     }

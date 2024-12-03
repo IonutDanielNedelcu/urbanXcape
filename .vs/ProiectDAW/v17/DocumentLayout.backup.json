@@ -1,22 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\",
+  "WorkspaceRootPath": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241202200614_appuser2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProiectDAW\\Data\\Migrations\\20241202200614_appuser2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241202200130_appuser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProiectDAW\\Data\\Migrations\\20241202200130_appuser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\views\\user\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\user\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\controllers\\applicationusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\controllers\\applicationusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\university\\an2sem1\\daw\\git\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,51 +62,130 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "City.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\City.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Models\\City.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\City.cs",
-              "RelativeToolTip": "ProiectDAW\\Models\\City.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GroupsController.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Controllers\\GroupsController.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\GroupsController.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Controllers\\GroupsController.cs*",
+              "RelativeToolTip": "ProiectDAW\\Controllers\\GroupsController.cs*",
+              "ViewState": "AgIAACMAAAAAAAAAAAA9wD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T15:08:59.166Z"
+              "WhenOpened": "2024-12-02T20:07:54.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\User.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\User.cs",
-              "RelativeToolTip": "ProiectDAW\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAoAAAAAAAAAA==",
+              "Title": "20241202200614_appuser2.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241202200614_appuser2.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Data\\Migrations\\20241202200614_appuser2.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241202200614_appuser2.cs",
+              "RelativeToolTip": "ProiectDAW\\Data\\Migrations\\20241202200614_appuser2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T14:24:39.484Z"
+              "WhenOpened": "2024-12-02T20:06:14.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20241202200130_appuser1.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241202200130_appuser1.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Data\\Migrations\\20241202200130_appuser1.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Data\\Migrations\\20241202200130_appuser1.cs",
+              "RelativeToolTip": "ProiectDAW\\Data\\Migrations\\20241202200130_appuser1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T20:01:30.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Program.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Program.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Program.cs",
-              "RelativeToolTip": "ProiectDAW\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Models\\SeedData.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Models\\SeedData.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Models\\SeedData.cs",
+              "RelativeToolTip": "ProiectDAW\\Models\\SeedData.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwFQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T14:56:44.388Z"
+              "WhenOpened": "2024-12-02T20:00:31.971Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\SeedData.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Models\\SeedData.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\SeedData.cs",
-              "RelativeToolTip": "ProiectDAW\\Models\\SeedData.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwD0AAAAsAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Show.cshtml",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Views\\User\\Show.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\User\\Show.cshtml",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Views\\User\\Show.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\User\\Show.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T20:00:10.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\appsettings.json",
+              "RelativeDocumentMoniker": "ProiectDAW\\appsettings.json",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\appsettings.json",
+              "RelativeToolTip": "ProiectDAW\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-02T19:55:00.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Program.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Program.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Program.cs",
+              "RelativeToolTip": "ProiectDAW\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T15:28:10.595Z",
+              "WhenOpened": "2024-12-02T19:29:36.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAArwMQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T19:28:37.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationUserController.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Controllers\\ApplicationUserController.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\ApplicationUserController.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Controllers\\ApplicationUserController.cs",
+              "RelativeToolTip": "ProiectDAW\\Controllers\\ApplicationUserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T19:25:42.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\University\\An2Sem1\\DAW\\GIT\\Proiect-DAW\\ProiectDAW\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "ProiectDAW\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T19:24:19.812Z",
               "EditorCaption": ""
             }
           ]

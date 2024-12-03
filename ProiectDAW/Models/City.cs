@@ -13,6 +13,6 @@ namespace ProiectDAW.Models
         [Required]
         public string Country { get; set; }
 
-        public virtual ICollection<User>? Users { get; set; }
+        public virtual ICollection<ApplicationUser>? Users { get; set; }
     }
 }

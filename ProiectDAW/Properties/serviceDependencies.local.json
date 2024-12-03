@@ -1,15 +1,11 @@
 {
   "dependencies": {
     "mssql1": {
-      "type": "mssql.local",
-      "connectionId": "ConnectionStrings:DefaultConnection"
-    },
-    "mssql2": {
       "serviceConnectorResourceId": "",
-      "secretStore": null,
+      "secretStore": "LocalSecretsFile",
+      "resourceId": null,
       "type": "mssql.local",
-      "connectionId": "ConnectionStrings:ProiectDAW",
-      "dynamicId": null
+      "connectionId": "_ProiectApplicationUser"
     }
   }
 }
