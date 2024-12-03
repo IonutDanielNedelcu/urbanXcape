@@ -17,67 +17,83 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProiectDAW
 build_property.RootNamespace = ProiectDAW
-build_property.ProjectDir = C:\Users\andre\OneDrive\Desktop\Proiect-DAW\ProiectDAW\
+build_property.ProjectDir = D:\University\An2Sem1\DAW\GIT\Proiect-DAW\ProiectDAW\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\andre\OneDrive\Desktop\Proiect-DAW\ProiectDAW
+build_property.MSBuildProjectDirectory = D:\University\An2Sem1\DAW\GIT\Proiect-DAW\ProiectDAW
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Home/Index.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Groups/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Groups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Groups/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Groups/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXFNob3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Home/Privacy.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Locations/Show.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25zXFNob3cuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Shared/Error.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Shared/_LoginPartial.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/_ViewImports.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/User/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaG93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/_ViewStart.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/OneDrive/Desktop/Proiect-DAW/ProiectDAW/Views/Shared/_Layout.cshtml]
+[D:/University/An2Sem1/DAW/GIT/Proiect-DAW/ProiectDAW/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1wz9knob3n

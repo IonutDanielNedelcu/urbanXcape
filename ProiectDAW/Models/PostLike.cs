@@ -13,6 +13,6 @@ namespace ProiectDAW.Models
         public int PostId { get; set; }
         [Required]
         public virtual Post Post { get; set; }
-        public virtual User User { get; set; }  
+        public virtual ApplicationUser User { get; set; }  
     }
 }

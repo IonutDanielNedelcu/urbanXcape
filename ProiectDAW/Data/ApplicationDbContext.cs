@@ -4,7 +4,7 @@ using ProiectDAW.Models;
 
 namespace ProiectDAW.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -22,7 +22,7 @@ namespace ProiectDAW.Data
         public DbSet<FollowRequest> FollowRequests { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<GroupRequest> GroupRequests { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }    
         public DbSet<CommentLike> CommentLikes { get; set; }
 

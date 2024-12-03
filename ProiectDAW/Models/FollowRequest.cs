@@ -20,8 +20,8 @@ namespace ProiectDAW.Models
         [Required]
         public bool Accepted { get; set; }
 
-        public virtual User? Follower { get; set; } // userul care a trimis cererea
+        public virtual ApplicationUser? Follower { get; set; } // userul care a trimis cererea
 
-        public virtual User? Followed { get; set; } // userul urmarit
+        public virtual ApplicationUser? Followed { get; set; } // userul urmarit
     }
 }
