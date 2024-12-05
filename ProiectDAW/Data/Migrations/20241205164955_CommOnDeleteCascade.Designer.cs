@@ -12,8 +12,8 @@ using ProiectDAW.Data;
 namespace ProiectDAW.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241202200130_appuser1")]
-    partial class appuser1
+    [Migration("20241205164955_CommOnDeleteCascade")]
+    partial class CommOnDeleteCascade
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -178,7 +178,6 @@ namespace ProiectDAW.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")

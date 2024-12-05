@@ -1,8 +1,9 @@
 {
   "dependencies": {
-    "mssql1": {
+    "mssql3": {
       "type": "mssql",
-      "connectionId": "_ProiectApplicationUser"
+      "connectionId": "ConnectionStrings:ProiectDAW",
+      "dynamicId": null
     }
   }
 }

@@ -1,0 +1,10 @@
+﻿@model ProiectDAW.Models.Post
+<h2>Editare postare</h2>
+<br />
+<form method="post" action="/Posts/Edit/@Model.Id">
+    <label>Descirere</label>
+    <br />
+    <input type="text" name="Description" value="@Model.Description" />
+    <br />
+    <button type="submit">Modifica postarea</button>
+</form>

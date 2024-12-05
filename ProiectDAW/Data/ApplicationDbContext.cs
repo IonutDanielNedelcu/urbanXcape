@@ -22,7 +22,7 @@ namespace ProiectDAW.Data
         public DbSet<FollowRequest> FollowRequests { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<GroupRequest> GroupRequests { get; set; }
-        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }    
         public DbSet<CommentLike> CommentLikes { get; set; }
 
@@ -74,8 +74,13 @@ namespace ProiectDAW.Data
                 .HasOne(fr => fr.Followed) // instanta de User care e urmarit
                 .WithMany(u => u.Followers)
                 .HasForeignKey(fr => fr.FollowedId);
-                
-      
+
+
+            modelBuilder.Entity<Comment>()
+               .HasOne(c => c.Post)
+               .WithMany(p => p.Comments)
+               .HasForeignKey(c => c.PostId)
+               .OnDelete(DeleteBehavior.Cascade);
 
 
             // GroupRequest PK

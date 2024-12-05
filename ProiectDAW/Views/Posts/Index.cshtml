@@ -1,0 +1,7 @@
+﻿
+@foreach (var post in ViewBag.Posts)
+{
+    <partial name="PostIndexShow" model="post" />
+}
+
+<a href="/Posts/New">Adaugare postare</a>

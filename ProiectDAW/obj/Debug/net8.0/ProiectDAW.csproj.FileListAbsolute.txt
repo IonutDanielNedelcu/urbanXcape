@@ -879,3 +879,7 @@ D:\University\An2Sem1\DAW\GIT\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\refint\Pro
 D:\University\An2Sem1\DAW\GIT\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\ProiectDAW.pdb
 D:\University\An2Sem1\DAW\GIT\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\ProiectDAW.genruntimeconfig.cache
 D:\University\An2Sem1\DAW\GIT\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\ref\ProiectDAW.dll
+C:\Users\andre\OneDrive\Desktop\Proiect-DAW\ProiectDAW\bin\Debug\net8.0\ProiectDAW.staticwebassets.endpoints.json
+C:\Users\andre\OneDrive\Desktop\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\andre\OneDrive\Desktop\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\staticwebassets\msbuild.ProiectDAW.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\andre\OneDrive\Desktop\Proiect-DAW\ProiectDAW\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

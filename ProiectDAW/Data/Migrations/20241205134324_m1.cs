@@ -6,17 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProiectDAW.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class AllEntities : Migration
+    public partial class m1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<bool>(
-                name: "Administrator",
-                table: "AspNetUsers",
-                type: "bit",
-                nullable: true);
-
             migrationBuilder.AddColumn<int>(
                 name: "CityId",
                 table: "AspNetUsers",
@@ -30,24 +24,18 @@ namespace ProiectDAW.Data.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "Discriminator",
-                table: "AspNetUsers",
-                type: "nvarchar(13)",
-                maxLength: 13,
-                nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<string>(
                 name: "FirstName",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: true);
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "LastName",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
-                nullable: true);
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Phone",
@@ -59,7 +47,8 @@ namespace ProiectDAW.Data.Migrations
                 name: "Privacy",
                 table: "AspNetUsers",
                 type: "bit",
-                nullable: true);
+                nullable: false,
+                defaultValue: false);
 
             migrationBuilder.AddColumn<string>(
                 name: "ProfilePic",
@@ -114,11 +103,17 @@ namespace ProiectDAW.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModeratorId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Groups", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Groups_AspNetUsers_ModeratorId",
+                        column: x => x.ModeratorId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -392,6 +387,11 @@ namespace ProiectDAW.Data.Migrations
                 column: "GroupId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Groups_ModeratorId",
+                table: "Groups",
+                column: "ModeratorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Media_PostId",
                 table: "Media",
                 column: "PostId");
@@ -431,8 +431,7 @@ namespace ProiectDAW.Data.Migrations
                 table: "AspNetUsers",
                 column: "CityId",
                 principalTable: "Cities",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />
@@ -486,19 +485,11 @@ namespace ProiectDAW.Data.Migrations
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "Administrator",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
                 name: "CityId",
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
                 name: "Description",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "Discriminator",
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(

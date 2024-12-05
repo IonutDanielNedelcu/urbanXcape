@@ -5,7 +5,7 @@
 namespace ProiectDAW.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Roluri : Migration
+    public partial class m2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
