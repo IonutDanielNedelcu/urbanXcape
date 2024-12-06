@@ -85,6 +85,7 @@ namespace ProiectDAW.Data
             modelBuilder.Entity<Comment>()
                 .HasOne(u => u.User)
                 .WithMany(fr => fr.Comments)
+                .HasForeignKey(u => u.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             // GroupRequest PK

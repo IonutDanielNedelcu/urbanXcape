@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jrB9EXQuRZ1b534/rzUnTxdQf0FvLH3MtGg02FuPZYM=",
+  "Hash": "nevAyMTana3ESJHUJGeFheqjtFnS1XLn/86dUcy/qzM=",
   "Source": "ProiectDAW",
   "BasePath": "_content/ProiectDAW",
   "Mode": "Default",
@@ -1422,6 +1422,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-12-06 115648.png"
+    },
+    {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 223750.png",
+      "SourceId": "ProiectDAW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\",
+      "BasePath": "_content/ProiectDAW",
+      "RelativePath": "images/Screenshot 2024-12-06 223750#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ncgn1qd482",
+      "Integrity": "eTQ0qaxW5sPpvhOwkE/zfHRHuPaJvopZcsTZmVa/fPg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-12-06 223750.png"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\js\\site.js",
@@ -5050,7 +5071,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 18:46:43 GMT"
+          "Value": "Fri, 06 Dec 2024 22:11:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5087,7 +5108,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 18:46:43 GMT"
+          "Value": "Fri, 06 Dec 2024 22:11:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5132,7 +5153,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 18:43:22 GMT"
+          "Value": "Fri, 06 Dec 2024 20:41:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5169,7 +5190,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 18:43:22 GMT"
+          "Value": "Fri, 06 Dec 2024 20:41:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5214,7 +5235,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 19:10:09 GMT"
+          "Value": "Fri, 06 Dec 2024 20:41:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5251,7 +5272,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 19:10:09 GMT"
+          "Value": "Fri, 06 Dec 2024 20:41:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5270,6 +5291,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-qzMWsRmB/50p/VO2TWr+7EvZdtGCK3N/Whx7Oq2Fly4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Screenshot 2024-12-06 223750.ncgn1qd482.png",
+      "AssetFile": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 223750.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "485243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eTQ0qaxW5sPpvhOwkE/zfHRHuPaJvopZcsTZmVa/fPg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 22:10:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ncgn1qd482"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Screenshot 2024-12-06 223750.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eTQ0qaxW5sPpvhOwkE/zfHRHuPaJvopZcsTZmVa/fPg="
+        }
+      ]
+    },
+    {
+      "Route": "images/Screenshot 2024-12-06 223750.png",
+      "AssetFile": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 223750.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "485243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eTQ0qaxW5sPpvhOwkE/zfHRHuPaJvopZcsTZmVa/fPg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 22:10:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eTQ0qaxW5sPpvhOwkE/zfHRHuPaJvopZcsTZmVa/fPg="
         }
       ]
     },

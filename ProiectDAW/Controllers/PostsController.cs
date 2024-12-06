@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using ProiectDAW.Data;
 using ProiectDAW.Models;
+using SQLitePCL;
+using System.Reflection.Metadata;
+using System.Security.Principal;
 
 namespace ProiectDAW.Controllers
 {
@@ -34,14 +38,41 @@ namespace ProiectDAW.Controllers
             return View();
         }
 
-        public IActionResult Show(int Id=3)
+        public IActionResult Show(int Id)
         {
-            Post post = db.Posts.Find(Id);
+            Post post = db.Posts.Include("Comments")
+                                .Where(post => post.Id == Id)
+                                .First();
             return View(post);
+        }
+        [HttpPost]
+        public IActionResult Show([FromForm] Comment comment) //adugare comentarii
+        {
+            comment.Date = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                db.Comments.Add(comment);
+                db.SaveChanges();
+                return Redirect("/Posts/Show/" + comment.PostId);
+            }
+            else
+            {
+                Post post = db.Posts.Include("Comments")
+                                    .Where(post => post.Id == comment.PostId)
+                                    .First();
+                Console.WriteLine("Eroare la adaugarea comentariului"); 
+                //return Redirect("/Articles/Show/" + comm.ArticleId);
+                return View(post);
+            }
         }
 
         public IActionResult New()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Redirect("/Identity/Account/Login"); // Controllerul și metoda Login
+            }
+
             return View();
         }
         [HttpPost]
@@ -85,9 +116,10 @@ namespace ProiectDAW.Controllers
             {
                 Console.WriteLine($"Eroare la adăugarea postării: {ex.Message}");
                 Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                // Dacă nu este autentificat, redirecționează la Login
+                
                 return View(post);
-            }   
-  
+            }
         }
 
         public IActionResult Edit(int Id)

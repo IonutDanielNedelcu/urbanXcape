@@ -3,6 +3,7 @@ wwwroot\favicon.ico
 wwwroot\images\Screenshot 2024-12-06 115431.png
 wwwroot\images\Screenshot 2024-12-06 115511.png
 wwwroot\images\Screenshot 2024-12-06 115648.png
+wwwroot\images\Screenshot 2024-12-06 223750.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
