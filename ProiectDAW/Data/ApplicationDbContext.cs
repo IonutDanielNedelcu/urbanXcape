@@ -80,8 +80,12 @@ namespace ProiectDAW.Data
                .HasOne(c => c.Post)
                .WithMany(p => p.Comments)
                .HasForeignKey(c => c.PostId)
-               .OnDelete(DeleteBehavior.Cascade);
+               .OnDelete(DeleteBehavior.NoAction);
 
+            modelBuilder.Entity<Comment>()
+                .HasOne(u => u.User)
+                .WithMany(fr => fr.Comments)
+                .OnDelete(DeleteBehavior.NoAction);
 
             // GroupRequest PK
             modelBuilder.Entity<GroupRequest>()

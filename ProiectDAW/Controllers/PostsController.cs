@@ -11,11 +11,13 @@ namespace ProiectDAW.Controllers
         private readonly ApplicationDbContext db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        public PostsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        private readonly IWebHostEnvironment _env; //pt poza
+        public PostsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IWebHostEnvironment env)
         {
             db = context;
             _userManager = userManager;
             _roleManager = roleManager;
+            _env = env;
         }
         public IActionResult Index()
         {
@@ -24,6 +26,11 @@ namespace ProiectDAW.Controllers
                                 .OrderByDescending(x => x.Date);
 
             ViewBag.Posts = posts;
+            //afisez mesajul din delete
+            if (TempData.ContainsKey("message"))
+            {
+                ViewBag.Msg = TempData["message"];
+            }
             return View();
         }
 
@@ -38,8 +45,33 @@ namespace ProiectDAW.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult New(Post post)
+        public async Task<IActionResult> New(Post post, IFormFile Image)
         {
+            if (Image != null && Image.Length > 0)
+            {
+                // Verificăm extensia
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".mp4", ".mov" };
+                var fileExtension = Path.GetExtension(Image.FileName).ToLower();
+                if (!allowedExtensions.Contains(fileExtension))
+                {
+                    Console.WriteLine("Invalid file extension");
+                    ModelState.AddModelError("Image", "Fișierul trebuie să fie o imagine (jpg, jpeg, png, gif) sau un video (mp4, mov).");
+                    return View(post);
+                }
+
+                // Cale stocare
+                var storagePath = Path.Combine(_env.WebRootPath, "images", Image.FileName);
+                var databaseFileName = "/images/" + Image.FileName;
+
+                // Salvare fișier
+                using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                {
+                    await Image.CopyToAsync(fileStream);
+                }
+                ModelState.Remove(nameof(post.Image));
+                post.Image = databaseFileName;
+            }
+
             try
             {
                 post.Date = DateTime.Now;
@@ -49,10 +81,13 @@ namespace ProiectDAW.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return View();
-            }
+                Console.WriteLine($"Eroare la adăugarea postării: {ex.Message}");
+                Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                return View(post);
+            }   
+  
         }
 
         public IActionResult Edit(int Id)
@@ -61,9 +96,34 @@ namespace ProiectDAW.Controllers
             return View(post);
         }
         [HttpPost]
-        public IActionResult Edit(int Id, Post editedPost)
+        public async Task<IActionResult> Edit(int Id, Post editedPost, IFormFile Image)
         {
             Post post = db.Posts.Find(Id);
+
+            if (Image != null && Image.Length > 0)
+            {
+                // Verificăm extensia
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".mp4", ".mov" };
+                var fileExtension = Path.GetExtension(Image.FileName).ToLower();
+                if (!allowedExtensions.Contains(fileExtension))
+                {
+                    Console.WriteLine("Invalid file extension");
+                    ModelState.AddModelError("Image", "Fișierul trebuie să fie o imagine (jpg, jpeg, png, gif) sau un video (mp4, mov).");
+                    return View(post);
+                }
+
+                // Cale stocare
+                var storagePath = Path.Combine(_env.WebRootPath, "images", Image.FileName);
+                var databaseFileName = "/images/" + Image.FileName;
+
+                // Salvare fișier
+                using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                {
+                    await Image.CopyToAsync(fileStream);
+                }
+                ModelState.Remove(nameof(post.Image));
+                post.Image = databaseFileName;
+            }
 
             try
             {
@@ -80,9 +140,15 @@ namespace ProiectDAW.Controllers
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            Post post = db.Posts.Find(Id);
+            Post post = db.Posts.Include(p => p.Comments).FirstOrDefault(p => p.Id == Id);
+            
+            //stergem comentariile postarii
+            db.Comments.RemoveRange(post.Comments);
+
             db.Posts.Remove(post);
             db.SaveChanges();
+
+            TempData["message"] = "Postarea a fost stearsa!";
             return RedirectToAction("Index");
         }
     }

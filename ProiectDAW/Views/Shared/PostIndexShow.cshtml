@@ -8,6 +8,20 @@
 <br />
 <a href="/Posts/Edit/@Model.Id">Editare postare</a>
 <br />
+
+@* imaginea *@
+@if (!string.IsNullOrEmpty(Model.Image)) 
+{
+    @if (Model.Image.Contains(".mp4") || Model.Image.Contains(".mov"))
+    {
+        <video width="550" height="300" controls> <source src="@Model.Image" type="video/mp4"> Your browser does not support the video tag. </video>
+    }
+    else
+    {
+        <img src="@Model.Image" alt="Image" style="width: 100%; height: 450px; object-fit: cover" />
+    }
+}
+<br />
 <form method="post" action="/Posts/Delete/@Model.Id">
     <button type="submit">Sterge postarea</button>
 </form>

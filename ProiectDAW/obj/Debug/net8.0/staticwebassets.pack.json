@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115431.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2024-12-06 115431.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115511.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2024-12-06 115511.png"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115648.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2024-12-06 115648.png"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

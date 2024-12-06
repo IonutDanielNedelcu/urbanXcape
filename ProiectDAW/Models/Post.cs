@@ -17,6 +17,8 @@ namespace ProiectDAW.Models
         public string UserId { get; set; }
         public int? GroupId { get; set; }
 
+        public string? Image { get; set; }
+
         public virtual ICollection<Comment>? Comments { get; set; }
         public virtual ICollection<Media>? Media { get; set; }
         [Required]

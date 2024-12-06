@@ -13,13 +13,12 @@ namespace ProiectDAW.Models
         public DateTime Date { get; set; }
         [Required]
         public int Likes { get; set; }
-        [Required]
-        public string UserId { get; set; }
-        [Required]
-        public int PostId { get; set; }
-        [Required]
-        public virtual Post Post { get; set; }
-        public virtual ApplicationUser User { get; set; }
+        
+        public string? UserId { get; set; }
+        
+        public int? PostId { get; set; }
+        public virtual Post? Post { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 
         public virtual ICollection<CommentLike>? CommentLikes { get; set; }
     }
