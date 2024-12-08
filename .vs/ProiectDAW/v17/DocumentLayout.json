@@ -11,24 +11,31 @@
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\shared\\commentsshow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\shared\\commentsshow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\posts\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\posts\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\comments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\comments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ProiectDAW/True/SqlTable/dbo.Comments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\shared\\postindexshow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\shared\\postindexshow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\comments\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\comments\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,15 +57,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Post.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\Post.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Models\\Post.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\Post.cs",
-              "RelativeToolTip": "ProiectDAW\\Models\\Post.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBUAAABDAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "dbo.Comments.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ProiectDAW/True/SqlTable/dbo.Comments.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ProiectDAW/True/SqlTable/dbo.Comments.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-08T16:54:06.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T13:39:34.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommentsController.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Controllers\\CommentsController.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\CommentsController.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Controllers\\CommentsController.cs",
+              "RelativeToolTip": "ProiectDAW\\Controllers\\CommentsController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwDkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T20:51:31.998Z",
+              "WhenOpened": "2024-12-07T15:05:01.875Z",
               "EditorCaption": ""
             },
             {
@@ -69,75 +97,72 @@
               "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\PostsController.cs",
               "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Controllers\\PostsController.cs",
               "RelativeToolTip": "ProiectDAW\\Controllers\\PostsController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAIwHwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T20:44:03.279Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommentsController.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Controllers\\CommentsController.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\CommentsController.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Controllers\\CommentsController.cs",
-              "RelativeToolTip": "ProiectDAW\\Controllers\\CommentsController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAwwEQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T20:43:22.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Show.cshtml",
               "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Posts\\Show.cshtml",
               "RelativeDocumentMoniker": "ProiectDAW\\Views\\Posts\\Show.cshtml",
               "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Posts\\Show.cshtml",
               "RelativeToolTip": "ProiectDAW\\Views\\Posts\\Show.cshtml",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-06T20:55:04.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Comments\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Comments\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Comments\\Edit.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\Comments\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "commentsShow.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\commentsShow.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\commentsShow.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\commentsShow.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\commentsShow.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T22:05:26.673Z",
+              "WhenOpened": "2024-12-07T15:24:36.792Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PostIndexShow.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\PostIndexShow.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\PostIndexShow.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\PostIndexShow.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\PostIndexShow.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T15:16:11.809Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "New.cshtml",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Comments\\New.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Comments\\New.cshtml",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Comments\\New.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\Comments\\New.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Posts\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Posts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Posts\\Index.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Posts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T20:54:46.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T16:32:46.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Models\\Comment.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\Comment.cs",
-              "RelativeToolTip": "ProiectDAW\\Models\\Comment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\Post.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Models\\Post.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Models\\Post.cs",
+              "RelativeToolTip": "ProiectDAW\\Models\\Post.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T20:57:01.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T20:51:31.998Z"
             }
           ]
         },

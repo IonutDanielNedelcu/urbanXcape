@@ -1,4 +1,12 @@
 ﻿@model ProiectDAW.Models.Post
+
+@if (!ViewData.ModelState.IsValid) //validare ca postarea sa nu fie goala
+{
+    <div class="alert alert-danger" role="alert">
+        @Html.ValidationSummary(false)
+    </div>
+}
+
 <h2>Editare postare</h2>
 <br />
 
@@ -23,13 +31,21 @@
         }
     }
     <br />
-
+    <br />
     <div class="form-group">
         <label asp-for="Image">Incarca o Imagine Noua</label>
         <input asp-for="Image" class="form-control" type="file" />
         @* <span asp-validation-for="Image" class="text-danger"></span> *@
     </div>
-    <br />
+
+    @if (Model.Image != null)
+    {
+        <div>
+            <a class="btn btn-outline-primary" href="/Posts/DeleteImage/@Model.Id">Sterge Imaginea</a>
+        </div>
+    }
+     <br />
     <button class="btn btn-success" type="submit">Salveaza</button>
 </form>
 
+   

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProiectDAW.Data;
 using ProiectDAW.Models;
@@ -17,26 +18,7 @@ namespace ProiectDAW.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
-
-        // Adaugarea unui comentariu asociat unui articol in baza de date
-        [HttpPost]
-        public IActionResult New(Comment comm)
-        {
-            comm.Date = DateTime.Now;
-
-            if (ModelState.IsValid)
-            {
-                db.Comments.Add(comm);
-                db.SaveChanges();
-                return Redirect("/Posts/Show/" + comm.PostId);
-            }
-            else
-            {
-                return Redirect("/Posts/Show/" + comm.PostId);
-            }
-
-        }
-
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Edit(int Id)
         {
             Comment comm = db.Comments.Find(Id);
@@ -44,29 +26,53 @@ namespace ProiectDAW.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Edit(int Id, Comment editedComm)
         {
             Comment comm = db.Comments.Find(Id);
-            if(ModelState.IsValid)
+
+            if (comm.UserId == _userManager.GetUserId(User))
             {
-                comm.Text = editedComm.Text;
+                if (ModelState.IsValid)
+                {
+                    comm.Text = editedComm.Text;
+                    db.SaveChanges();
+                    return Redirect("/Posts/Show/" + comm.PostId);
+                }
+                else
+                {
+                    TempData["msg"] = "Nu aveți dreptul să editați acest mesaj!";
+                    TempData["msgType"] = "alert-danger"; //clasa de bootstrap pt mesaj de eroare(rosu)
+                    return Redirect("/Posts/Show/" + comm.PostId);
+                }
+            }
+            else
+            {
+                TempData["msg"] = "Nu aveți dreptul să editați această postare!";
+                TempData["msgType"] = "alert-danger"; //clasa de bootstrap pt mesaj de eroare(rosu)
+                return Redirect("/Posts/Show/" + comm.PostId);
+            }
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Delete(int id)
+        {   
+            Comment comm = db.Comments.Find(id);
+
+            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            {
+                db.Comments.Remove(comm);
                 db.SaveChanges();
                 return Redirect("/Posts/Show/" + comm.PostId);
             }
             else
             {
+                TempData["msg"] = "Nu aveți dreptul să ștergeți acest mesaj!";
+                TempData["msgType"] = "alert-danger"; //clasa de bootstrap pt mesaj de eroare(rosu)
                 return Redirect("/Posts/Show/" + comm.PostId);
             }
             
-        }
-
-        [HttpPost]
-        public IActionResult Delete(int id)
-        {
-            Comment comm = db.Comments.Find(id);
-            db.Comments.Remove(comm);
-            db.SaveChanges();
-            return Redirect("/Posts/Show/" + comm.PostId);
         }
 
     }

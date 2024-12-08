@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nevAyMTana3ESJHUJGeFheqjtFnS1XLn/86dUcy/qzM=",
+  "Hash": "9up1WqbqY1uEjLTBTyxbEqoDIK7emwTQwKvZjHFHqnk=",
   "Source": "ProiectDAW",
   "BasePath": "_content/ProiectDAW",
   "Mode": "Default",
@@ -1422,6 +1422,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-12-06 115648.png"
+    },
+    {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115842.png",
+      "SourceId": "ProiectDAW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\",
+      "BasePath": "_content/ProiectDAW",
+      "RelativePath": "images/Screenshot 2024-12-06 115842#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fce1ubv3vk",
+      "Integrity": "35iT4nAjhBVonTucwXv8lf0PhI6kLEIkLRYJAfqyAi4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-12-06 115842.png"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 223750.png",
@@ -5071,7 +5092,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 22:11:14 GMT"
+          "Value": "Sun, 08 Dec 2024 13:20:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5108,7 +5129,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 22:11:14 GMT"
+          "Value": "Sun, 08 Dec 2024 13:20:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5235,7 +5256,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 20:41:21 GMT"
+          "Value": "Sat, 07 Dec 2024 19:02:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5272,7 +5293,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 06 Dec 2024 20:41:21 GMT"
+          "Value": "Sat, 07 Dec 2024 19:02:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5291,6 +5312,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-qzMWsRmB/50p/VO2TWr+7EvZdtGCK3N/Whx7Oq2Fly4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Screenshot 2024-12-06 115842.fce1ubv3vk.png",
+      "AssetFile": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115842.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "190240"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"35iT4nAjhBVonTucwXv8lf0PhI6kLEIkLRYJAfqyAi4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 18:57:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fce1ubv3vk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Screenshot 2024-12-06 115842.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-35iT4nAjhBVonTucwXv8lf0PhI6kLEIkLRYJAfqyAi4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Screenshot 2024-12-06 115842.png",
+      "AssetFile": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115842.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "190240"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"35iT4nAjhBVonTucwXv8lf0PhI6kLEIkLRYJAfqyAi4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 18:57:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-35iT4nAjhBVonTucwXv8lf0PhI6kLEIkLRYJAfqyAi4="
         }
       ]
     },

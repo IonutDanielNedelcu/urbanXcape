@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProiectDAW.Data;
 
@@ -11,9 +12,11 @@ using ProiectDAW.Data;
 namespace ProiectDAW.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241207165157_abc")]
+    partial class abc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -267,7 +270,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cities", (string)null);
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Comment", b =>
@@ -300,7 +303,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments", (string)null);
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.CommentLike", b =>
@@ -315,7 +318,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("CommentId");
 
-                    b.ToTable("CommentLikes", (string)null);
+                    b.ToTable("CommentLikes");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.FollowRequest", b =>
@@ -336,7 +339,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("FollowedId");
 
-                    b.ToTable("FollowRequests", (string)null);
+                    b.ToTable("FollowRequests");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Group", b =>
@@ -361,7 +364,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("ModeratorId");
 
-                    b.ToTable("Groups", (string)null);
+                    b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.GroupRequest", b =>
@@ -382,7 +385,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("GroupId");
 
-                    b.ToTable("GroupRequests", (string)null);
+                    b.ToTable("GroupRequests");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Location", b =>
@@ -415,7 +418,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Locations", (string)null);
+                    b.ToTable("Locations");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Media", b =>
@@ -437,7 +440,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Media", (string)null);
+                    b.ToTable("Media");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Post", b =>
@@ -473,7 +476,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Posts", (string)null);
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.PostLike", b =>
@@ -488,7 +491,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostLikes", (string)null);
+                    b.ToTable("PostLikes");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.PostLocation", b =>
@@ -503,7 +506,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("PostLocations", (string)null);
+                    b.ToTable("PostLocations");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Rating", b =>
@@ -524,7 +527,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Ratigs", (string)null);
+                    b.ToTable("Ratigs");
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.UserGroup", b =>
@@ -539,7 +542,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("GroupId");
 
-                    b.ToTable("UserGroups", (string)null);
+                    b.ToTable("UserGroups");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

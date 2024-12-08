@@ -1,92 +1,19 @@
 ﻿@model ProiectDAW.Models.Post
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-danger" role="alert" @TempData["msgType"]>@TempData["msg"]</div>
+}
+<br />
+    
 @if (Model != null)
 {
     <partial name="PostIndexShow" model="Model" /> 
 }
 
-@* Afisare comentarii impreuna cu butoanele de editare si stergere *@
+<partial name="commentsShow" model="Model" /> @* COMENTARII-> afisare + adaugare*@
 
-@if(Model.Comments != null)
-{
-    @foreach (var comm in Model.Comments)
-    {
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-
-                <div class="col-md-8">
-
-                    <div>
-
-                        <p>@comm.Text</p>
-                        <small>@comm.Date</small>
-                        
-
-                    </div>
-                    <br>
-
-                     <div class="d-flex"> 
-
-                         <div> 
-
-                             <a class="btn btn-outline-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Editeaza</a> 
-
-                         </div> 
-
-                         <div> 
-
-                             <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id"> 
-
-                                 <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button> 
-
-                             </form> 
-
-                        </div> 
-
-                     </div>
-
-                    <br />
-
-                </div>
-
-                <div class="col-md-2"></div>
-
-            </div>
-
-        </div>
-    }
-}
-
-@* Afisarea formularului in care se poate adauga un comentariu *@
-
-<div class="container">
-
-    <div class="row">
-
-        <div class="col-md-2"></div>
-
-        <div class="col-md-8">
-
-            <div class="card">
-
-                <form method="post" asp-controller="Posts" asp-action="Show">
-                    <div class="card-body">
-                        <input type="hidden" name="PostId" value="@Model.Id" />
-                        <label>Continut comentariu</label> <br />
-                        <textarea class="form-control" name="Text"></textarea>
-                        <button class="btn btn-success " type="submit">Adauga comentariul</button>
-                    </div>
-                </form>
-
-            </div>
-
-        </div>
-
-        <div class="col-md-2"></div>
-
-    </div>
-
+<br />
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/Index"><i class="bi bi-pencil-square"></i>Afiseaza postari</a>
 </div>
-
-<a href="/Posts/Index">Afisare postari</a>

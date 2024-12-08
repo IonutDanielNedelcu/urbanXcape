@@ -1,13 +1,18 @@
 ﻿
 
+<div><i class="bi bi-person">@Model.User.UserName</i></div>
+<br />
+<br />
 
 <p>@Model.Description</p>
 <p>@Model.Date</p>
 <br />
-<a href="/Posts/Show/@Model.Id">Afisare postare</a>
-<br />
-<a href="/Posts/Edit/@Model.Id">Editare postare</a>
-<br />
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/Show/@Model.Id"><i class="bi bi-pencil-square"></i>Afiseaza postare</a>
+</div>
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/Edit/@Model.Id"><i class="bi bi-pencil-square"></i>Editeaza postare</a>
+</div>
 
 @* imaginea *@
 @if (!string.IsNullOrEmpty(Model.Image)) 
