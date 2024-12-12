@@ -130,6 +130,22 @@ namespace ProiectDAW.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                // verifying the existence of the username in the database
+                var existingUser = await _userManager.FindByNameAsync(Input.UserName);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Input.UserName", "Acest nume de utilizator este deja folosit.");
+                    return Page();
+                }
+
+                // verifying the existence of the email in the database
+                var existingEmailUser = await _userManager.FindByEmailAsync(Input.Email);
+                if (existingEmailUser != null)
+                {
+                    ModelState.AddModelError("Input.Email", "Email already used.");
+                    return Page();
+                }
+
                 var user = new ApplicationUser { UserName = Input.UserName, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName };
 
                 await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);

@@ -1,4 +1,5 @@
 ﻿using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,14 +12,18 @@ namespace ProiectDAW.Controllers
     public class GroupsController : Controller
     {
         private readonly ApplicationDbContext db;
-
         private readonly UserManager<ApplicationUser> _userManager;
-        public GroupsController(ApplicationDbContext context)
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        public GroupsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             db = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         // list of all groups available
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Index()
         {
             var groups = db.Groups;
@@ -33,19 +38,14 @@ namespace ProiectDAW.Controllers
         }
 
         // details of a group
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Show(int id)
         {
-            Group group1 = db.Groups
+            Group group = db.Groups
+                .Include("Posts")
                 .Include("UserGroups").Include("UserGroups.User")
                 .Where(gr => gr.Id == id)
                 .First();
-
-            Group group = db.Groups
-                            .Include(g => g.UserGroups)
-                            .ThenInclude(ug => ug.User)
-                            .Include(g => g.Moderator)
-                            .Where(gr => gr.Id == id)
-                            .FirstOrDefault();
 
             return View(group);
         }
@@ -59,6 +59,7 @@ namespace ProiectDAW.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult New(Group group)
         {
             // Assuming you have a way to get the current user's ID

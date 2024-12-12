@@ -9,11 +9,11 @@ using ProiectDAW.Data;
 
 #nullable disable
 
-namespace ProiectDAW.Data.Migrations
+namespace ProiectDAW.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241206173847_ma")]
-    partial class ma
+    [Migration("20241212205438_Transfer")]
+    partial class Transfer
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -467,7 +467,6 @@ namespace ProiectDAW.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -707,9 +706,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasOne("ProiectDAW.Models.ApplicationUser", "User")
                         .WithMany("Posts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Group");
 

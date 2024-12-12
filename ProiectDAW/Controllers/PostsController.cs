@@ -28,6 +28,7 @@ namespace ProiectDAW.Controllers
         {
             var posts = db.Posts.Include("User")
                                 .Include("Comments")
+                                .Where(p => p.GroupId == null)
                                 .OrderByDescending(x => x.Date);
 
             ViewBag.Posts = posts;
@@ -102,6 +103,7 @@ namespace ProiectDAW.Controllers
 
             return View();
         }
+
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
         public async Task<IActionResult> New(Post post, IFormFile Image)
@@ -161,6 +163,7 @@ namespace ProiectDAW.Controllers
                 return View(post);
             }
         }
+
         [Authorize(Roles = "User,Admin")]
         public IActionResult Edit(int Id) //doar userul care a postat poate edita
         {
