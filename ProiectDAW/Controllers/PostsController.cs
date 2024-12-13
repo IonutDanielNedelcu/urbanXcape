@@ -101,7 +101,9 @@ namespace ProiectDAW.Controllers
                 return Redirect(loginUrl);
             }
 
-            return View();
+            Post post = new Post();
+
+            return View(post);
         }
 
         [Authorize(Roles = "User,Admin")]
@@ -212,7 +214,7 @@ namespace ProiectDAW.Controllers
     
 
             ModelState.Remove(nameof(post.Image));
-            //verififcam daca cel putin un camp este completat (sau daca posarea are deja imagine sau descriere)
+            //verificam daca cel putin un camp este completat (sau daca posarea are deja imagine sau descriere)
             if (string.IsNullOrEmpty(editedPost.Description) && string.IsNullOrEmpty(post.Description) && (Image == null || Image.Length == 0) && (post.Image == null || post.Image.Length == 0))
             {
                 ModelState.AddModelError("", "Cel puțin un câmp trebuie să fie completat (Description sau Image).");

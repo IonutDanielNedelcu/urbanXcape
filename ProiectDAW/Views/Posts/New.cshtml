@@ -2,7 +2,7 @@
 
 <h2>Formular adaugare postare</h2>
 
-<form enctype="multipart/form-data" asp-controller="Posts" asp-action="New">
+<form method="post" enctype="multipart/form-data" asp-controller="Posts" asp-action="New">
     <div class="form-group"> 
         <label asp-for="Description" class="form-label">Descriere</label> 
         <br /> 
@@ -16,6 +16,12 @@
         
         </div>
     <br />
+
+    @if (TempData["GroupId"] != null)
+    {
+        <input type="hidden" asp-for="GroupId" value="@TempData["GroupId"]" />
+    }
+
     <button class="btn btn-success" type="submit">Adauga postare</button>
 </form>
 <br />
