@@ -62,8 +62,7 @@
               "RelativeToolTip": "ProiectDAW\\Models\\Comment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:57:12.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:57:12.325Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "ProiectDAW\\Controllers\\CommentsController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAcwFMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:18:57.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:18:57.232Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "ProiectDAW\\Models\\CommentLike.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T11:57:25.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:57:25.825Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "ProiectDAW\\Views\\Shared\\PostIndexShow.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-27T10:51:36.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T10:51:36.4Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "ProiectDAW\\Controllers\\PostsController.cs",
               "ViewState": "AgIAABgBAAAAAAAAAAAAACUBAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T10:49:48.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T10:49:48.269Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "ProiectDAW\\Views\\Posts\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-27T11:01:53.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T11:01:53.307Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "ProiectDAW\\Models\\Post.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T10:49:55.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T10:49:55.783Z"
             }
           ]
         },
