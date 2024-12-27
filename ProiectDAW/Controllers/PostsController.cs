@@ -279,5 +279,32 @@ namespace ProiectDAW.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Like(int id)
+        {
+            Post post = db.Posts.Find(id);
+            PostLike postLike = db.PostLikes.FirstOrDefault(p => p.PostId == id && p.UserId == _userManager.GetUserId(User));
+            if (postLike != null)
+            {
+                post.Likes--;
+                db.PostLikes.Remove(postLike);
+                db.SaveChanges();
+                TempData[id.ToString()] = "0";
+            }
+            else
+            {
+                db.PostLikes.Add(new PostLike
+                {
+                    PostId = id,
+                    UserId = _userManager.GetUserId(User)
+                });
+                post.Likes++;
+                db.SaveChanges();
+                TempData[id.ToString()] = "1";
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
