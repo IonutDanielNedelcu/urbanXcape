@@ -1,0 +1,51 @@
+﻿@model ProiectDAW.Models.Post
+
+@if (!ViewData.ModelState.IsValid) //validare ca postarea sa nu fie goala
+{
+    <div class="alert alert-danger" role="alert">
+        @Html.ValidationSummary(false)
+    </div>
+}
+
+<h2>Editare postare</h2>
+<br />
+
+<form enctype="multipart/form-data" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="Description" class="form-label">Descriere</label>
+        <br />
+        <input asp-for="Description" class="form-control" />
+        <br /><br />
+    </div
+
+    <br />
+    @if (!string.IsNullOrEmpty(Model.Image)) 
+    {
+        @if (Model.Image.Contains(".mp4") || Model.Image.Contains(".mov"))
+        {
+            <video width="100" height="100" controls> <source src="@Model.Image" type="video/mp4"> Your browser does not support the video tag. </video>
+        }
+        else
+        {
+            <img src="@Model.Image" alt="Image" style="width: 100%; height: 450px; object-fit: cover" />
+        }
+    }
+    <br />
+    <br />
+    <div class="form-group">
+        <label asp-for="Image">Incarca o Imagine Noua</label>
+        <input asp-for="Image" class="form-control" type="file" />
+        @* <span asp-validation-for="Image" class="text-danger"></span> *@
+    </div>
+
+    @if (Model.Image != null)
+    {
+        <div>
+            <a class="btn btn-outline-primary" href="/Posts/DeleteImage/@Model.Id">Sterge Imaginea</a>
+        </div>
+    }
+     <br />
+    <button class="btn btn-success" type="submit">Salveaza</button>
+</form>
+
+   

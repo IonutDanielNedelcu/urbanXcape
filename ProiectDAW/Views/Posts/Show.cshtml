@@ -1,0 +1,19 @@
+﻿@model ProiectDAW.Models.Post
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-danger" role="alert" @TempData["msgType"]>@TempData["msg"]</div>
+}
+<br />
+    
+@if (Model != null)
+{
+    <partial name="PostIndexShow" model="Model" /> 
+}
+
+<partial name="commentsShow" model="Model" /> @* COMENTARII-> afisare + adaugare*@
+
+<br />
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/Index"><i class="bi bi-pencil-square"></i>Afiseaza postari</a>
+</div>

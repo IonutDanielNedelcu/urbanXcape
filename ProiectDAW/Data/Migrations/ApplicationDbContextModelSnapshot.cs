@@ -267,7 +267,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cities");
+                    b.ToTable("Cities", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Comment", b =>
@@ -284,7 +284,7 @@ namespace ProiectDAW.Data.Migrations
                     b.Property<int>("Likes")
                         .HasColumnType("int");
 
-                    b.Property<int>("PostId")
+                    b.Property<int?>("PostId")
                         .HasColumnType("int");
 
                     b.Property<string>("Text")
@@ -292,7 +292,6 @@ namespace ProiectDAW.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -301,7 +300,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.CommentLike", b =>
@@ -316,7 +315,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("CommentId");
 
-                    b.ToTable("CommentLikes");
+                    b.ToTable("CommentLikes", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.FollowRequest", b =>
@@ -337,7 +336,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("FollowedId");
 
-                    b.ToTable("FollowRequests");
+                    b.ToTable("FollowRequests", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Group", b =>
@@ -362,7 +361,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("ModeratorId");
 
-                    b.ToTable("Groups");
+                    b.ToTable("Groups", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.GroupRequest", b =>
@@ -383,7 +382,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("GroupId");
 
-                    b.ToTable("GroupRequests");
+                    b.ToTable("GroupRequests", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Location", b =>
@@ -416,7 +415,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Locations");
+                    b.ToTable("Locations", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Media", b =>
@@ -438,7 +437,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Media");
+                    b.ToTable("Media", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Post", b =>
@@ -458,6 +457,9 @@ namespace ProiectDAW.Data.Migrations
                     b.Property<int?>("GroupId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Likes")
                         .HasColumnType("int");
 
@@ -471,7 +473,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.PostLike", b =>
@@ -486,7 +488,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostLikes");
+                    b.ToTable("PostLikes", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.PostLocation", b =>
@@ -501,7 +503,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("PostLocations");
+                    b.ToTable("PostLocations", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.Rating", b =>
@@ -522,7 +524,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Ratigs");
+                    b.ToTable("Ratigs", (string)null);
                 });
 
             modelBuilder.Entity("ProiectDAW.Models.UserGroup", b =>
@@ -537,7 +539,7 @@ namespace ProiectDAW.Data.Migrations
 
                     b.HasIndex("GroupId");
 
-                    b.ToTable("UserGroups");
+                    b.ToTable("UserGroups", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -605,14 +607,12 @@ namespace ProiectDAW.Data.Migrations
                     b.HasOne("ProiectDAW.Models.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("ProiectDAW.Models.ApplicationUser", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Post");
 

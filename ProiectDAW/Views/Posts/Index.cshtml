@@ -1,0 +1,16 @@
+﻿@*mesaj pt stergere sau adaugare postare*@
+@if (ViewBag.Msg != null)
+{
+    <div class="alert-success p-3 rounded-3 text-center mb-5" @ViewBag.MsgType>@ViewBag.Msg</div>
+}
+
+@foreach (var post in ViewBag.Posts)
+{
+    <partial name="PostIndexShow" model="post" />
+}
+<br />
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/New"><i class="bi bi-pencil-square"></i>Adaugare postare</a>
+</div>
+
+
