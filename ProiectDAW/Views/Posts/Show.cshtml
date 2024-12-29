@@ -11,6 +11,11 @@
     <partial name="PostIndexShow" model="Model" /> 
 }
 
+@if (Model.Location != null)
+{ 
+    <partial name="MapShow" model="Model.Location" />
+}
+
 <partial name="commentsShow" model="Model" /> @* COMENTARII-> afisare + adaugare*@
 
 <br />

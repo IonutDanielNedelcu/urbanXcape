@@ -26,6 +26,8 @@ namespace ProiectDAW.Data
         public DbSet<UserGroup> UserGroups { get; set; }    
         public DbSet<CommentLike> CommentLikes { get; set; }
 
+    
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 
 namespace ProiectDAW.Models
@@ -13,9 +14,10 @@ namespace ProiectDAW.Models
         public int Likes { get; set; }
         public string? UserId { get; set; }
         public int? GroupId { get; set; }
-
+        public int? LocationId { get; set; }
         public string? Image { get; set; }
-
+        
+        public virtual Location? Location { get; set; }
         public virtual ICollection<Comment>? Comments { get; set; }
         public virtual ICollection<Media>? Media { get; set; }
         public virtual ICollection<PostLocation>? PostLocations { get; set; }

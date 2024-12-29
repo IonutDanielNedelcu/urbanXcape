@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps cu Geolocation</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfFjZbr9TKPkzp1F9edie_iqvcSsUougw&libraries=places&v=beta&loading=async" async defer></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    @* <input id="autocomplete" type="text" placeholder="Introduceți locația" style="width: 100%; padding: 10px; margin-bottom: 10px;"> *@
+
+    @* harta *@
+    <div id="map" style="width: 100%; height: 500px;"></div>
+
+
+
+    <h1>Google Maps cu Geolocation API</h1>
+    <button id="find-location">Găsește locația mea</button>
+    <div id="map"></div>
+
+    <script>
+        let map, marker;
+        
+
+        function initMap() {
+            // Inițializează harta cu o locație implicită
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 44.4268, lng: 26.1025 }, // București
+                zoom: 10,
+            });
+
+                // Creează un obiect autocomplete legat de câmpul de input
+            const autocomplete = new google.maps.places.Autocomplete(document.getElementById("autocomplete"), {
+                types: ["geocode"], // Sugestii pentru locații geografice
+                componentRestrictions: { country: "ro" }, // Restricționează la România (opțional)
+            });
+
+            // Adaugă un listener pentru când utilizatorul selectează o locație
+            autocomplete.addListener("place_changed", () => {
+                const place = autocomplete.getPlace();
+
+                if (!place.geometry || !place.geometry.location) {
+                    alert("Locația selectată nu este validă. Vă rugăm să încercați din nou.");
+                    return;
+                }
+
+                // Centrează harta pe locația selectată
+                map.setCenter(place.geometry.location);
+                map.setZoom(15);
+
+                // Adaugă un marker la locația selectată
+                if (marker) {
+                    marker.setMap(null);
+                }
+                marker = new google.maps.Marker({
+                    position: place.geometry.location,
+                    map: map,
+                    title: place.formatted_address || "Locație selectată",
+                });
+
+                
+                
+                    const postId = @Model.Id;
+
+                     const locationData = {
+                    postId: postId,
+                    address: place.formatted_address, // Adresa completă
+                    latitude: place.geometry.location.lat(), // Latitudine
+                    longitude: place.geometry.location.lng(), // Longitudine
+                };
+
+                document.getElementById("addLocation").addEventListener("click", async function(event) {
+                 
+                    fetch(`/api/locations/save-location`, {
+                    method: "POST",  // Specifică tipul cererii HTTP (POST)
+                    headers: {
+                        "Content-Type": "application/json",  // Indică faptul că datele sunt trimise în format JSON
+                    },
+                    body: JSON.stringify(locationData),  // Convertește obiectul `locationData` într-un string JSON
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            alert("Locația a fost salvată cu succes!");  // Afișează un mesaj dacă cererea a fost procesată cu succes
+                             const result = response.json();
+                                if (result.redirectUrl) {
+                                    // Redirecționează utilizatorul către URL-ul furnizat(edit)
+                                    window.location.href = result.redirectUrl;
+                                }
+                        } else {
+                            alert("A apărut o eroare la salvarea locației.");  // Afișează un mesaj de eroare dacă cererea nu a fost procesată corect
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Eroare la salvarea locației:", error);  // Afișează eroarea în consola browserului dacă cererea a eșuat
+                        alert("Eroare de rețea.");  // Afișează un mesaj de eroare general
+                    });
+
+
+                });
+
+            });
+        }
+
+
+
+        
+
+        window.onload = initMap;
+
+    </script>
+</body>
+</html>

@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "ContainingType": "ProiectDAW.Controllers.LocationsController",
+    "Method": "Index",
+    "RelativePath": "api/locations",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProiectDAW.Controllers.LocationsController",
+    "Method": "GetLocation",
+    "RelativePath": "api/locations/get-location/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProiectDAW.Controllers.LocationsController",
+    "Method": "SaveLocation",
+    "RelativePath": "api/locations/save-location",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "location",
+        "Type": "ProiectDAW.Models.Address",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProiectDAW.Controllers.LocationsController",
+    "Method": "Show",
+    "RelativePath": "api/locations/show",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

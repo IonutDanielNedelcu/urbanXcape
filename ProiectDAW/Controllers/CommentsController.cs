@@ -97,7 +97,7 @@ namespace ProiectDAW.Controllers
                 });
                 comm.Likes++;
                 db.SaveChanges();
-                TempData[id.ToString()] = "1";
+                TempData[id.ToString()] = "2";
             }
             return Redirect("/Posts/Show/" + comm.PostId);
         }
