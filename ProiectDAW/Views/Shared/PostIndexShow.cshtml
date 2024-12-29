@@ -7,6 +7,16 @@
 <p>@Model.Description</p>
 <p>@Model.Date</p>
 <br />
+
+@* Adresa *@
+@if (Model.Location != null)
+{
+    <div>
+        <p>@Model.Location.Address</p>
+    </div>
+}
+<br />
+
 <div>
     <a class="btn btn-outline-primary" href="/Posts/Show/@Model.Id"><i class="bi bi-pencil-square"></i>Afiseaza postare</a>
 </div>
@@ -30,4 +40,23 @@
 <form method="post" action="/Posts/Delete/@Model.Id">
     <button type="submit">Sterge postarea</button>
 </form>
+
+<br />
+
+@if (TempData[Model.Id.ToString()] == "2") 
+{
+    <form method="post" asp-controller="Posts" asp-action="Like" asp-route-id="@Model.Id"> 
+         <button type="submit">Unlike</button> 
+     </form> 
+ }
+ else 
+ { 
+     <form method="post" asp-controller="Posts" asp-action="Like" asp-route-id="@Model.Id"> 
+        <button type="submit">Like</button> 
+     </form> 
+ }
+
+
+
+<h3>@Model.Likes Likes</h3>
 <hr />

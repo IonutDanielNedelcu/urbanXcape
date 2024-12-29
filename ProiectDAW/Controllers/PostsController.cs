@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Newtonsoft.Json;
 using ProiectDAW.Data;
 using ProiectDAW.Models;
 using SQLitePCL;
@@ -17,6 +18,7 @@ namespace ProiectDAW.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IWebHostEnvironment _env; //pt poza
+
         public PostsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IWebHostEnvironment env)
         {
             db = context;
@@ -28,16 +30,33 @@ namespace ProiectDAW.Controllers
         {
             var posts = db.Posts.Include("User")
                                 .Include("Comments")
-                                .Where(p => p.GroupId == null)
+                                .Include("PostLikes")
+                                .Include("Location")
                                 .OrderByDescending(x => x.Date);
 
+            
+
             ViewBag.Posts = posts;
+
+            //verificam daca userul curent a dat like la postari
+            foreach (var post in posts)
+            {
+                PostLike postlike = post.PostLikes.FirstOrDefault(p => p.UserId == _userManager.GetUserId(User));
+                if (postlike != null)
+                {
+                    TempData[post.Id.ToString()] = "2";
+                }
+            }
+
             //afisez mesajul din delete
             if (TempData.ContainsKey("msg"))
             {
                 ViewBag.Msg = TempData["msg"];
                 ViewBag.MsgType = TempData["msgType"];
             }
+
+            TempData["ReturnUrl"] = "/Posts/Index"; //calea de intoarcere din Like
+
             return View();
         }
 
@@ -45,7 +64,10 @@ namespace ProiectDAW.Controllers
         {
             Post post = db.Posts.Include("Comments")
                                 .Include("User")
-                                .Include("Comments.User")    
+                                .Include("Comments.User")
+                                .Include("Comments.CommentLikes")
+                                .Include("PostLikes")
+                                .Include("Location")
                                 .Where(post => post.Id == Id)
                                 .First();
             ViewBag.Buttons = false;
@@ -54,8 +76,26 @@ namespace ProiectDAW.Controllers
                 ViewBag.Buttons = true;
             }
 
+            //verificam daca userul curent a dat like la postare
+            PostLike postlike = post.PostLikes.FirstOrDefault(p => p.UserId == _userManager.GetUserId(User));
+            if (postlike != null)
+            {
+                TempData[post.Id.ToString()] = "2";
+            }
+            //verificam daca userul curent a dat like la comentarii
+            foreach (var comment in post.Comments)
+            {
+                CommentLike commentLike = comment.CommentLikes.FirstOrDefault(p => p.UserId == _userManager.GetUserId(User));
+                if (commentLike != null)
+                {
+                    TempData[comment.Id.ToString()] = "2";
+                }
+            }
+
+            TempData["ReturnUrl"] = $"/Posts/Show/{Id}"; //calea de intoarcere din Like
             return View(post);
         }
+
         [HttpPost]
         [Authorize(Roles = "User,Admin")]
         public IActionResult Show([FromForm] Comment comment) //adugare comentarii
@@ -88,6 +128,8 @@ namespace ProiectDAW.Controllers
                 //return Redirect("/Articles/Show/" + comm.ArticleId);
                 return View(post);
             }
+
+
         }
 
         [Authorize(Roles = "User,Admin")]
@@ -101,16 +143,37 @@ namespace ProiectDAW.Controllers
                 return Redirect(loginUrl);
             }
 
-            Post post = new Post();
-
-            return View(post);
+            return View();
         }
-
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
-        public async Task<IActionResult> New(Post post, IFormFile Image)
+        public async Task<IActionResult> New([FromForm] Post post, [FromForm] IFormFile Image, [FromForm] string locationData)
         {
+            // legam locatia cu postarea
+            if (!string.IsNullOrEmpty(locationData))
+            {
+                
+                var location = JsonConvert.DeserializeObject<Address>(locationData);
+                Location location1 = db.Locations.FirstOrDefault(l => l.Address == location.address);
+                //verificam dafac exista deja in baza de date 
+                if (location1 != null)
+                {
+                    post.LocationId = location1.Id;
+                }
+                else
+                {
+                    db.Locations.Add(new Location
+                    {
+                        Address = JsonConvert.DeserializeObject<Address>(locationData).address,
+                        Latitude = JsonConvert.DeserializeObject<Address>(locationData).latitude,
+                        Longitude = JsonConvert.DeserializeObject<Address>(locationData).longitude
+                    });
+                    db.SaveChanges();
+                    post.LocationId = db.Locations.FirstOrDefault(l => l.Address == location.address).Id;
+                }
+            }
 
+            
             if (Image != null && Image.Length > 0)
             {
                 // Verificăm extensia
@@ -145,11 +208,13 @@ namespace ProiectDAW.Controllers
                 return View(post);
             }
 
+ 
             post.Date = DateTime.Now;
             post.Likes = 0;
             post.UserId = _userManager.GetUserId(User);
-            
-            if(ModelState.IsValid)
+
+  
+            if (ModelState.IsValid)
             {
                 
                 db.Posts.Add(post);
@@ -157,19 +222,24 @@ namespace ProiectDAW.Controllers
 
                 TempData["msg"] = "Postarea a fost adaugata!";
                 TempData["msgType"] = "alert-success"; //clasa de bootstrap pt mesaj de succes(verde)
-                return RedirectToAction("Index");
+                //return Ok(new { message = "Postarea a fost adăugată cu succes!" });
+                //return RedirectToAction("Index");
+                return Json(new { redirectUrl = Url.Action("Index", "Posts") });
             }
             else
             {
                 // Dacă nu este autentificat, redirecționează la Login
-                return View(post);
+                return BadRequest();
+                //return View(post);
             }
+            
         }
-
         [Authorize(Roles = "User,Admin")]
         public IActionResult Edit(int Id) //doar userul care a postat poate edita
         {
-            Post post = db.Posts.Find(Id);
+            Post post = db.Posts.Include("Location")
+                                .Where(p => p.Id == Id)
+                                .First();
 
             if (post.UserId == _userManager.GetUserId(User)) //verificam daca userul curent este cel care a postat
             {                                                //User.IsInRole("Admin") - verifica daca userul este admin
@@ -214,7 +284,7 @@ namespace ProiectDAW.Controllers
     
 
             ModelState.Remove(nameof(post.Image));
-            //verificam daca cel putin un camp este completat (sau daca posarea are deja imagine sau descriere)
+            //verififcam daca cel putin un camp este completat (sau daca posarea are deja imagine sau descriere)
             if (string.IsNullOrEmpty(editedPost.Description) && string.IsNullOrEmpty(post.Description) && (Image == null || Image.Length == 0) && (post.Image == null || post.Image.Length == 0))
             {
                 ModelState.AddModelError("", "Cel puțin un câmp trebuie să fie completat (Description sau Image).");
@@ -227,12 +297,14 @@ namespace ProiectDAW.Controllers
                 {                                                //User.IsInRole("Admin") - verifica daca userul este admin
                     post.Description = editedPost.Description;
                     db.SaveChanges();
+                    
                     return RedirectToAction("Index");
                 }
                 else
                 {
                     TempData["msg"] = "Nu aveți dreptul să editați această postare!";
                     TempData["msgType"] = "alert-danger"; //clasa de bootstrap pt mesaj de eroare(rosu)
+           
                     return RedirectToAction("Index");
                 }
 
@@ -250,6 +322,23 @@ namespace ProiectDAW.Controllers
             if (post.Image != null)
             {
                 post.Image = null;
+                db.SaveChanges();
+                Console.WriteLine("Imaginea a fost stearsa!");
+            }
+            else
+            {
+                Console.WriteLine("Nu exista imagine de sters!");
+            }
+            return View("Edit", post);
+        }
+
+        public IActionResult DeleteLocation(int Id)
+        {
+
+            Post post = db.Posts.Find(Id);
+            if (post.LocationId != null)
+            {
+                post.LocationId = null;
                 db.SaveChanges();
                 Console.WriteLine("Imaginea a fost stearsa!");
             }
@@ -283,6 +372,39 @@ namespace ProiectDAW.Controllers
                 TempData["msgType"] = "alert-danger"; //clasa de bootstrap pt mesaj de eroare(rosu)
             }
             return RedirectToAction("Index");
+        }
+
+
+        
+
+        [HttpPost]
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Like(int id)
+        {
+            
+            Post post = db.Posts.Find(id);
+            PostLike postLike = db.PostLikes.FirstOrDefault(p => p.PostId == id && p.UserId == _userManager.GetUserId(User));
+            if (postLike != null)
+            {
+                post.Likes--;
+                db.PostLikes.Remove(postLike);
+                db.SaveChanges();
+                TempData[id.ToString()] = "0";
+            }
+            else
+            {
+                db.PostLikes.Add(new PostLike
+                {
+                    PostId = id,
+                    UserId = _userManager.GetUserId(User)
+                });
+                post.Likes++;
+                db.SaveChanges();
+                TempData[id.ToString()] = "2";
+            }
+
+            
+            return Redirect(TempData["ReturnUrl"].ToString());
         }
     }
 }

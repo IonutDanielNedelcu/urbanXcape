@@ -10,7 +10,7 @@
 <h2>Editare postare</h2>
 <br />
 
-<form enctype="multipart/form-data" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">
+<form id="edit_post_form" enctype="multipart/form-data" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">
     <div class="form-group">
         <label asp-for="Description" class="form-label">Descriere</label>
         <br />
@@ -45,6 +45,28 @@
         </div>
     }
      <br />
+
+    @if (Model.Location != null)
+    {
+        <partial name="MapShow" model="Model.Location" />
+        <div>
+            <a class="btn btn-outline-primary" href="/Posts/DeleteLocation/@Model.Id">Sterge Locatia</a>
+        </div>
+    }
+    else{
+        <div>
+            
+            <input id="autocomplete" type="text" placeholder="Introduceți locația" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            <partial name="MapEdit" model="Model"></partial>
+        </div>
+
+         <div>
+            <a id="addLocation" class="btn btn-outline-primary">Adauga Locatia</a>
+        </div>
+
+    }
+     <br />
+
     <button class="btn btn-success" type="submit">Salveaza</button>
 </form>
 

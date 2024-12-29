@@ -397,21 +397,17 @@ namespace ProiectDAW.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
 
                     b.Property<int>("RatingCounter")
                         .HasColumnType("int");
 
                     b.Property<float>("RatingScore")
                         .HasColumnType("real");
-
-                    b.Property<bool>("Valid")
-                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -463,12 +459,17 @@ namespace ProiectDAW.Migrations
                     b.Property<int>("Likes")
                         .HasColumnType("int");
 
+                    b.Property<int?>("LocationId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("GroupId");
+
+                    b.HasIndex("LocationId");
 
                     b.HasIndex("UserId");
 
@@ -701,11 +702,17 @@ namespace ProiectDAW.Migrations
                         .WithMany("Posts")
                         .HasForeignKey("GroupId");
 
+                    b.HasOne("ProiectDAW.Models.Location", "Location")
+                        .WithMany()
+                        .HasForeignKey("LocationId");
+
                     b.HasOne("ProiectDAW.Models.ApplicationUser", "User")
                         .WithMany("Posts")
                         .HasForeignKey("UserId");
 
                     b.Navigation("Group");
+
+                    b.Navigation("Location");
 
                     b.Navigation("User");
                 });

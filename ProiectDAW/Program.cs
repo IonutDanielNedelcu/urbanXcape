@@ -55,4 +55,7 @@ app.MapControllerRoute(
     pattern: "{controller=Posts}/{action=Index}/{id?}");
 app.MapRazorPages();
 
+
+
+
 app.Run();

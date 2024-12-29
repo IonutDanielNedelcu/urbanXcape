@@ -2,7 +2,7 @@
 
 <h2>Formular adaugare postare</h2>
 
-<form method="post" enctype="multipart/form-data" asp-controller="Posts" asp-action="New">
+<form id="new_post_form" enctype="multipart/form-data" asp-controller="Posts" asp-action="New">
     <div class="form-group"> 
         <label asp-for="Description" class="form-label">Descriere</label> 
         <br /> 
@@ -13,18 +13,18 @@
     <div class="form-group"> 
         <label asp-for="Image">Incarca Imaginea</label> 
         <input asp-for="Image" class="form-control" type="file" /> 
-        
-        </div>
+    </div>
     <br />
-
-    @if (TempData["GroupId"] != null)
-    {
-        <input type="hidden" asp-for="GroupId" value="@TempData["GroupId"]" />
-    }
-
+    <div class="form-group">
+        <label asp-for="Location" class="form-label">Locatie</label>
+        <input id="autocomplete" type="text" placeholder="Introduceți locația" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+        <partial name="MapNew" model="Model"></partial>
+        
+    </div>
     <button class="btn btn-success" type="submit">Adauga postare</button>
 </form>
 <br />
+
 
 @if (!ViewData.ModelState.IsValid) //validare ca postarea sa nu fie goala
 {

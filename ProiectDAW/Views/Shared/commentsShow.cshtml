@@ -33,17 +33,32 @@
                         }
                        
 
-                        <div>
-                            @if (ViewBag.Buttons == true)
-                            {
-                                <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id">
+                        <div> 
+                             @if (ViewBag.Buttons == true) 
+                             { 
+                                 <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id">
 
-                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button>
+                                 <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button> 
+                                 </form>
 
-                                </form>
-                            }
+                             } 
+                              
      
                         </div>
+
+                        @if (TempData[comm.Id.ToString()] == "2")
+                        {
+                            <form method="post" asp-controller="Comments" asp-action="Like" asp-route-id="@comm.Id">
+                                <button type="submit">Unlike</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <form method="post" asp-controller="Comments" asp-action="Like" asp-route-id="@comm.Id">
+                                <button type="submit">Like</button>
+                            </form>
+                        }
+                        <h1>  @comm.Likes Likes</h1>
 
                     </div>
 

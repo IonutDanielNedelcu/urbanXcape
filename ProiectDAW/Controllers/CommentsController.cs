@@ -75,5 +75,32 @@ namespace ProiectDAW.Controllers
             
         }
 
+        [HttpPost]
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Like(int id)
+        {
+            Comment comm = db.Comments.Find(id);
+            CommentLike commLike = db.CommentLikes.FirstOrDefault(p => p.CommentId == id && p.UserId == _userManager.GetUserId(User));
+            if (commLike != null)
+            {
+                comm.Likes--;
+                db.CommentLikes.Remove(commLike);
+                db.SaveChanges();
+                TempData[id.ToString()] = "0";
+            }
+            else
+            {
+                db.CommentLikes.Add(new CommentLike
+                {
+                    CommentId = id,
+                    UserId = _userManager.GetUserId(User)
+                });
+                comm.Likes++;
+                db.SaveChanges();
+                TempData[id.ToString()] = "2";
+            }
+            return Redirect("/Posts/Show/" + comm.PostId);
+        }
+
     }
 }

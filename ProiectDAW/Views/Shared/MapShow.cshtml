@@ -1,0 +1,69 @@
+﻿@model ProiectDAW.Models.Location
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps cu Geolocation</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfFjZbr9TKPkzp1F9edie_iqvcSsUougw&libraries=places&v=beta&loading=async" async defer></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    @* harta *@
+    <div id="map" style="width: 100%; height: 500px;"></div>
+
+    <script>
+        let map, marker;
+
+        function initMap() {
+            // Inițializează harta cu o locație implicită
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 44.4268, lng: 26.1025 }, // București
+                zoom: 10,
+            });
+            // Inițializează harta cu locatia din bd
+            fetchLocationFromDatabase(@Model.Id);
+        }
+
+             // Funcție pentru a prelua locația din baza de date
+        function fetchLocationFromDatabase(id) {
+            fetch(`/api/locations/get-location/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        // Centrează harta pe locația preluată
+                        const location = { lat: data.latitude, lng: data.longitude };
+                        map.setCenter(location);
+                        map.setZoom(15);
+
+                        // Adaugă un marker la locația preluată
+                        if (marker) {
+                            marker.setMap(null);
+                        }
+                        marker = new google.maps.Marker({
+                            position: location,
+                            map: map,
+                            title: data.address || "Locație preluată",
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error("Eroare la preluarea locației:", error);
+                });
+        }
+
+        // Inițializează harta la încărcarea paginii
+        window.onload = initMap;
+
+
+    </script>
+</body>
+</html>
+
