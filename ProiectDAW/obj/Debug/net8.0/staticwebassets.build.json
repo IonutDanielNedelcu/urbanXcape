@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KzGKz4WQfQKd9NCx42sOFJXcNhwHSDBd3n0N5PL9NdY=",
+  "Hash": "UO0JgstCGW0daHt6hz7T638+vMPZIhd+Xp/86CxifVI=",
   "Source": "ProiectDAW",
   "BasePath": "_content/ProiectDAW",
   "Mode": "Default",
@@ -1359,6 +1359,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\467970241_1517129425657273_7344895004273702161_n.jpg",
+      "SourceId": "ProiectDAW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\",
+      "BasePath": "_content/ProiectDAW",
+      "RelativePath": "images/467970241_1517129425657273_7344895004273702161_n#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "od6mkmref9",
+      "Integrity": "zKW7gypUVUlkpw7Oxatf536CN6ld7EHwb7r4k/Pu4qQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\467970241_1517129425657273_7344895004273702161_n.jpg"
     },
     {
       "Identity": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\Screenshot 2024-12-06 115431.png",
@@ -5066,6 +5087,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "images/467970241_1517129425657273_7344895004273702161_n.jpg",
+      "AssetFile": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\467970241_1517129425657273_7344895004273702161_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "90892"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zKW7gypUVUlkpw7Oxatf536CN6ld7EHwb7r4k/Pu4qQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 29 Dec 2024 17:00:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zKW7gypUVUlkpw7Oxatf536CN6ld7EHwb7r4k/Pu4qQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/467970241_1517129425657273_7344895004273702161_n.od6mkmref9.jpg",
+      "AssetFile": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\wwwroot\\images\\467970241_1517129425657273_7344895004273702161_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "90892"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zKW7gypUVUlkpw7Oxatf536CN6ld7EHwb7r4k/Pu4qQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 29 Dec 2024 17:00:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "od6mkmref9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/467970241_1517129425657273_7344895004273702161_n.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zKW7gypUVUlkpw7Oxatf536CN6ld7EHwb7r4k/Pu4qQ="
         }
       ]
     },

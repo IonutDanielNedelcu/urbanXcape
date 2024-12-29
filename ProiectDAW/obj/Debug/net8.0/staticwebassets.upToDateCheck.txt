@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\467970241_1517129425657273_7344895004273702161_n.jpg
 wwwroot\images\Screenshot 2024-12-06 115431.png
 wwwroot\images\Screenshot 2024-12-06 115511.png
 wwwroot\images\Screenshot 2024-12-06 115648.png
