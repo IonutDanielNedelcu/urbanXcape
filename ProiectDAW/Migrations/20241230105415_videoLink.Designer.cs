@@ -12,8 +12,8 @@ using ProiectDAW.Data;
 namespace ProiectDAW.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241229105926_buffer")]
-    partial class buffer
+    [Migration("20241230105415_videoLink")]
+    partial class videoLink
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -252,25 +252,6 @@ namespace ProiectDAW.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("ProiectDAW.Models.BufferLP", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("LocationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PostId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BufferLP");
-                });
-
             modelBuilder.Entity("ProiectDAW.Models.City", b =>
                 {
                     b.Property<int>("Id")
@@ -486,6 +467,9 @@ namespace ProiectDAW.Data.Migrations
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("linkVideo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -9,6 +9,7 @@ using ProiectDAW.Models;
 using SQLitePCL;
 using System.Reflection.Metadata;
 using System.Security.Principal;
+using System.Web;
 
 namespace ProiectDAW.Controllers
 {
@@ -147,7 +148,7 @@ namespace ProiectDAW.Controllers
         }
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
-        public async Task<IActionResult> New([FromForm] Post post, [FromForm] IFormFile Image, [FromForm] string locationData)
+        public async Task<IActionResult> New([FromForm] Post post, [FromForm] IFormFile Image, [FromForm] string? locationData)
         {
             // legam locatia cu postarea
             if (!string.IsNullOrEmpty(locationData))
@@ -207,8 +208,18 @@ namespace ProiectDAW.Controllers
                 ModelState.AddModelError("", "Cel puțin un câmp trebuie să fie completat (Description sau Image).");
                 return View(post);
             }
+            if(string.IsNullOrEmpty(locationData))
+            {
+                ModelState.AddModelError("", "Introduceti locatia!");
+                return View(post);
+            }
 
- 
+            //video
+            if (!string.IsNullOrEmpty(post.linkVideo))
+            {
+                post.linkVideo = ConvertLinkToEmbed(post.linkVideo);
+            }
+
             post.Date = DateTime.Now;
             post.Likes = 0;
             post.UserId = _userManager.GetUserId(User);
@@ -224,11 +235,15 @@ namespace ProiectDAW.Controllers
                 TempData["msgType"] = "alert-success"; //clasa de bootstrap pt mesaj de succes(verde)
                 //return Ok(new { message = "Postarea a fost adăugată cu succes!" });
                 //return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                Console.WriteLine("\n corect \n");
+
                 return Json(new { redirectUrl = Url.Action("Index", "Posts") });
             }
             else
             {
                 // Dacă nu este autentificat, redirecționează la Login
+                
                 return BadRequest();
                 //return View(post);
             }
@@ -406,5 +421,22 @@ namespace ProiectDAW.Controllers
             
             return Redirect(TempData["ReturnUrl"].ToString());
         }
+
+        private string ConvertLinkToEmbed(string link)
+        {
+            if (link.Contains("youtube.com") || link.Contains("youtu.be"))
+            {
+                // Extrage ID-ul videoclipului YouTube
+                var videoId = link.Contains("youtu.be")
+                    ? link.Split('/').Last()
+                    : HttpUtility.ParseQueryString(new Uri(link).Query).Get("v");
+
+                // Returnează codul iframe
+                return $"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/{videoId}\" frameborder=\"0\" allowfullscreen></iframe>";
+            }
+
+            return string.Empty; // Returnează un string gol dacă nu este un link suportat
+        }
+
     }
 }

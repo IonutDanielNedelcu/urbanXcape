@@ -37,10 +37,21 @@
     }
 }
 <br />
+
+@* video*@
+@if (!string.IsNullOrEmpty(Model.linkVideo))
+{
+    @* <iframe width="560" height="315" src="https://www.youtube.com/embed/SqcY0GlETPk?si =VrZYZbaC3y9rpPyx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> *@
+
+    <div class="video-container">
+        @Html.Raw(Model.linkVideo)
+    </div>
+   
+}
+
 <form method="post" action="/Posts/Delete/@Model.Id">
     <button type="submit">Sterge postarea</button>
 </form>
-
 <br />
 
 @if (TempData[Model.Id.ToString()] == "2") 
