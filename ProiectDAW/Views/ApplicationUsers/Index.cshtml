@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<br />
+<h2 class="text-center">Users</h2>
+<br />
+
+@if (ViewBag.Message != null)
+{
+        <div class="alert alert-success">
+        @ViewBag.Message
+        </div>
+}
+
+
+@foreach (var applicationUser in ViewBag.ApplicationUsers)
+{
+        <div class="container">
+            <div class="card-body">
+            <h3 class="card-title"><a class="text-decoration-none" asp-controller="ApplicationUsers" asp-action="Show" asp-route-id="@applicationUser.Id">@applicationUser.UserName</a></h3>
+            <h2>@applicationUser.FirstName @applicationUser.LastName</h2>
+            <p class="card-text">@applicationUser.Description<p />
+            </div>
+        </div>
+}

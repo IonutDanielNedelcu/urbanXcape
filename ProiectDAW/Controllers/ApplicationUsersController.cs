@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProiectDAW.Data;
 using ProiectDAW.Models;
 
@@ -19,14 +20,36 @@ namespace ProiectDAW.Controllers
         }
         public IActionResult Index()
         {
+            var applicationUsers = db.ApplicationUsers;
+            ViewBag.ApplicationUsers = applicationUsers;
+
             return View();
         }
 
         public IActionResult Show(string id)
         {
-            // ApplicationUser? user = db.ApplicationUsers.Find(id);
-            //return View(user);
-            return View();
+            ApplicationUser? applicationUser = db.ApplicationUsers
+                .Include(u => u.Posts)
+                .Include(u => u.Followers)
+                .Include(u => u.Following)
+                .FirstOrDefault(u => u.Id == id);
+
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            if (applicationUser.Id == _userManager.GetUserId(User))
+            {
+                ViewBag.IsCurrentUser = true;
+            }
+            else
+            {
+                ViewBag.IsCurrentUser = false;
+            }
+            return View(applicationUser);
         }
+
+
     }
 }
