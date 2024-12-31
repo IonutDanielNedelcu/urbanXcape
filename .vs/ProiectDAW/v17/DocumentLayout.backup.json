@@ -1,38 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\",
+  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\applicationusers\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\applicationusers\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\controllers\\applicationuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\controllers\\applicationuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\applicationusers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\applicationusers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|c:\\users\\andre\\onedrive\\desktop\\proiect-daw\\proiectdaw\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andre\\OneDrive\\Desktop\\var1 Template - Free-CSS.com\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,111 +29,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T23:47:25.553Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\ApplicationUsers\\Show.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\ApplicationUsers\\Show.cshtml",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\ApplicationUsers\\Show.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\ApplicationUsers\\Show.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T23:36:20.425Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T23:31:32.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-29T23:29:51.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAA7wJcAAACkAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Program.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Program.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Program.cs",
+              "RelativeToolTip": "ProiectDAW\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T23:14:40.983Z",
+              "WhenOpened": "2024-12-31T14:05:51.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ApplicationUsersController.cs",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Controllers\\ApplicationUsersController.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\ApplicationUsersController.cs",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Controllers\\ApplicationUsersController.cs",
-              "RelativeToolTip": "ProiectDAW\\Controllers\\ApplicationUsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T23:02:01.356Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-31T13:38:16.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAmwLIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T22:29:20.57Z",
+              "DocumentIndex": 3,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-31T13:33:14.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "ProiectDAW\\Models\\ApplicationUser.cs",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "ProiectDAW\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T22:28:13.889Z",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\var1 Template - Free-CSS.com\\html\\index.html",
+              "RelativeDocumentMoniker": "..\\var1 Template - Free-CSS.com\\html\\index.html",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\var1 Template - Free-CSS.com\\html\\index.html",
+              "RelativeToolTip": "..\\var1 Template - Free-CSS.com\\html\\index.html",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-31T13:04:44.663Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "ProiectDAW\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwCUAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-31T12:11:33.851Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1099,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

@@ -7,10 +7,10 @@
 @foreach (var post in ViewBag.Posts)
 {
     <partial name="PostIndexShow" model="post" />
-    
-
+   
 }
 <br />
+
 <div>
     <a class="btn btn-outline-primary" asp-controller="Posts" asp-action="New"><i class="bi bi-pencil-square"></i>Adaugare postare</a>
 </div>
