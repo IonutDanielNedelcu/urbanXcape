@@ -1,18 +1,17 @@
 ﻿@if (ViewBag.Comment != null)
 {
 
-    <h2>Editare comentariu</h2>
-    <br />
+    
 
-    <form method="post" action="/Comments/Edit/@ViewBag.Comment.Id">
+    <form method="post" asp-controller="Comments" asp-action="Edit" asp-route-id="@ViewBag.Comment.Id">
 
-        <label>Continut comentariu</label>
+        <label>Comment</label>
         <br />
 
-        <textarea name="Text">@ViewBag.Comment.Text</textarea>
+        <textarea class="form-control" id="commentText" name="Text" rows="4" required>@ViewBag.Comment.Text</textarea>
         <br />
 
-        <button class="btn  btn-primary" type="submit">Editeaza comentariul</button>
+        <button class="btn btn-success mt-3" type="submit">Edit</button>
     </form>
 
 }

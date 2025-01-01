@@ -44,17 +44,16 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Posts" asp-action="Index">Home</a>
                         </li>
+                      
                         <li class="nav-item">
-                            <a class="nav-link" href="~/blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/features.html">Features</a>
+                            <a class="nav-link" asp-controller="ApplicationUsers" asp-action="Index">My Account</a>
                         </li>
                         
-                        @* <li class="nav-item"> *@
-                        @*     <a class="nav-link" asp-controller="Posts" asp-action="New">Login</a> *@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Posts" asp-action="New">Add Post</a>
+                        </li>
+
                         <partial name="_LoginPartial" />
-                        @* </li> *@
                         <li class="nav-item">
                             <a class="nav-link" href="#"><img src="~/images/serach-icon.png"></a>
                         </li>
@@ -81,24 +80,7 @@
     <!-- footer section start -->
     <div class="footer_section layout_padding">
         <div class="container">
-            <div class="footer_logo"><a href="index.html"><img src="~/images/footer-logo.png"></a></div>
-            <div class="footer_menu">
-                <ul>
-                    <li><a asp-controller="Posts" asp-action="Index">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="contact.html">contact us</a></li>
-                </ul>
-            </div>
-            <div class="contact_menu">
-                <ul>
-                    <li><a href="#"><img src="~/images/call-icon.png"></a></li>
-                    <li><a href="#">Call : 0744104579</a></li>
-                    <li><a href="blog.html"><img src="images/mail-icon.png"></a></li>
-                    <li><a href="features.html">andreidurdun2@gmail.com</a></li>
-                </ul>
-            </div>
+            
         </div>
     </div>
     <!-- footer section end -->

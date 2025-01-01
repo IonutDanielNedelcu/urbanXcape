@@ -257,11 +257,13 @@ namespace ProiectDAW.Controllers
                                 .First();
 
             if (post.UserId == _userManager.GetUserId(User)) //verificam daca userul curent este cel care a postat
-            {                                                //User.IsInRole("Admin") - verifica daca userul este admin
+            {   
+                ViewBag.Buttons = true;                                    //User.IsInRole("Admin") - verifica daca userul este admin
                 return View(post);
             }
             else
             {
+                
                 TempData["msg"] = "Nu aveți dreptul să editați această postare!";
                 TempData["msgType"] = "alert-danger"; //clasa de bootstrap pt mesaj de eroare(rosu)
                 return RedirectToAction("Index");

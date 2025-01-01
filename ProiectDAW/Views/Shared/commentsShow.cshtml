@@ -1,106 +1,72 @@
-﻿
+﻿<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 @* Afisare comentarii impreuna cu butoanele de editare si stergere *@
 
 @if (Model.Comments != null)
 {
     @foreach (var comm in Model.Comments)
     {
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-
+        <div class="container my-4">
+            <div class="row justify-content-center">
                 <div class="col-md-8">
 
-                    <div>
-
+                    <div class="comment-box p-3 mb-3 rounded shadow-sm">
                         <p>@comm.Text</p>
-                        <small>@comm.Date</small>
-                        <strong><i class="bi bi-person">@comm.User.UserName</i></strong>
+                        <small class="text-muted">@comm.Date.ToString("dd MMM yyyy")</small>
+                        <strong><i class="bi bi-person"></i> @comm.User.UserName</strong>
 
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            @if (ViewBag.Buttons == true)
+                            {
+                                <div>
+                                    <a class="btn btn-outline-primary btn-sm" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i> Edit</a>
+                                    <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id" class="d-inline">
+                                        <button class="btn btn-outline-danger btn-sm" type="submit"><i class="bi bi-trash"></i> Delete</button>
+                                    </form>
+                                </div>
+                            }
 
-                    </div>
-                    <br>
+                            @if (TempData[comm.Id.ToString()] == "2")
+                            {
+                                @* unlike *@
+                                <form method="post" asp-controller="Comments" asp-action="Like" asp-route-id="@comm.Id" class="d-flex align-items-center">
+                                    <button type="submit" class="custom-button"><div><i class="bi bi-heart-fill"></i></div></button>
+                                    <p class="ms-2">@comm.Likes Likes</p>
+                                </form>
+                            }
+                            else
+                            {
+                                <form method="post" asp-controller="Comments" asp-action="Like" asp-route-id="@comm.Id" class="d-flex align-items-center">
+                                    <button type="submit" class="custom-button"><div><i class="bi bi-heart"></i></div></button>
+                                    <p class="ms-2">@comm.Likes Likes</p>
+                                </form>
+                            }
 
-                    <div class="d-flex">
-
-                        @if (ViewBag.Buttons == true)
-                        {
-                            <div>
-
-                            <a class="btn btn-outline-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Editeaza</a>
-
-                            </div>
-                        }
-                       
-
-                        <div> 
-                             @if (ViewBag.Buttons == true) 
-                             { 
-                                 <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id">
-
-                                 <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button> 
-                                 </form>
-
-                             } 
-                              
-     
                         </div>
-
-                        @if (TempData[comm.Id.ToString()] == "2")
-                        {
-                            <form method="post" asp-controller="Comments" asp-action="Like" asp-route-id="@comm.Id">
-                                <button type="submit">Unlike</button>
-                            </form>
-                        }
-                        else
-                        {
-                            <form method="post" asp-controller="Comments" asp-action="Like" asp-route-id="@comm.Id">
-                                <button type="submit">Like</button>
-                            </form>
-                        }
-                        <h1>  @comm.Likes Likes</h1>
-
                     </div>
-
-                    <br />
 
                 </div>
-
-                <div class="col-md-2"></div>
-
             </div>
-
         </div>
     }
 }
 
 @* Afisarea formularului in care se poate adauga un comentariu *@
 
-<div class="container">
-
-    <div class="row">
-
-        <div class="col-md-2"></div>
-
+<div class="container my-5">
+    <div class="row justify-content-center">
         <div class="col-md-8">
-
             <div class="card">
-
-                <form method="post" asp-controller="Posts" asp-action="Show">
-                    <div class="card-body">
+                <div class="card-body">
+                    <form method="post" asp-controller="Posts" asp-action="Show">
                         <input type="hidden" name="PostId" value="@Model.Id" />
-                        <label>Continut comentariu</label> <br />
-                        <textarea class="form-control" name="Text"></textarea>
-                        <button class="btn btn-success " type="submit">Adauga comentariul</button>
-                    </div>
-                </form>
-
+                        <div class="form-group">
+                            <label for="commentText">Conținut comentariu</label>
+                            <textarea class="form-control" id="commentText" name="Text" rows="4" required></textarea>
+                        </div>
+                        <button class="btn btn-success mt-3" type="submit">Add a Comment</button>
+                    </form>
+                </div>
             </div>
-
         </div>
-
-        <div class="col-md-2"></div>
-
     </div>
-
 </div>

@@ -1,33 +1,34 @@
 ﻿@model ProiectDAW.Models.Post
 
-<h2>Formular adaugare postare</h2>
+<h2>Add a new post</h2>
 
 <form id="new_post_form" enctype="multipart/form-data" asp-controller="Posts" asp-action="New">
     <div class="form-group"> 
-        <label asp-for="Description" class="form-label">Descriere</label> 
+        <label asp-for="Description" class="form-label">Description</label> 
         <br /> 
         <input asp-for="Description" class="form-control" /> 
        
         <br /><br /> 
     </div>
     <div class="form-group"> 
-        <label asp-for="Image">Incarca Imaginea</label> 
+        <label asp-for="Image">Upload an image</label> 
         <input asp-for="Image" class="form-control" type="file" /> 
     </div>
     <br />
     <div>
-        <label asp-for="linkVideo" class="form-label">Link videoclip</label>
-        <input asp-for="linkVideo" class="form-label" type="text"/>
+        <label asp-for="linkVideo" class="form-label">Youtube video link</label>
+        <input asp-for="linkVideo" class="form-control" type="text" />
     </div>
 
     <br />
     <div class="form-group">
-        <label asp-for="Location" class="form-label">Locatie</label>
+        <label asp-for="Location" class="form-label">Enter the address of your location</label>
         <input id="autocomplete" type="text" placeholder="Introduceți locația" style="width: 100%; padding: 10px; margin-bottom: 10px;">
         <partial name="MapNew" model="Model"></partial>
         
     </div>
-    <button class="btn btn-success" type="submit">Adauga postare</button>
+    <br />
+    <button class="btn btn-success" type="submit">Publish</button>
 </form>
 <br />
 
@@ -38,7 +39,3 @@
         @Html.ValidationSummary(false)
     </div>
 }
-
-<div>
-    <a class="btn btn-outline-primary" href="/Posts/Index"><i class="bi bi-pencil-square"></i>Inapi la postari</a>
-</div>

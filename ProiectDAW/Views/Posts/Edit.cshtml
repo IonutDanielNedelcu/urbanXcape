@@ -7,16 +7,16 @@
     </div>
 }
 
-<h2>Editare postare</h2>
+<h2>Edit post</h2>
 <br />
 
 <form id="edit_post_form" enctype="multipart/form-data" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">
     <div class="form-group">
-        <label asp-for="Description" class="form-label">Descriere</label>
+        <label asp-for="Description" class="form-label">Description</label>
         <br />
         <input asp-for="Description" class="form-control" />
         <br /><br />
-    </div
+    </div>
 
     <br />
     @if (!string.IsNullOrEmpty(Model.Image)) 
@@ -33,24 +33,30 @@
     <br />
     <br />
     <div class="form-group">
-        <label asp-for="Image">Incarca o Imagine Noua</label>
+        <label asp-for="Image">Upload a new image</label>
         <input asp-for="Image" class="form-control" type="file" />
         @* <span asp-validation-for="Image" class="text-danger"></span> *@
     </div>
-
+    <br />
     @if (Model.Image != null)
     {
         <div>
-            <a class="btn btn-outline-primary" href="/Posts/DeleteImage/@Model.Id">Sterge Imaginea</a>
+            <a class="btn btn-outline-primary" href="/Posts/DeleteImage/@Model.Id">Delete image</a>
         </div>
+        <br />
     }
-     <br />
+     
 
+     <div>
+        <label asp-for="linkVideo" class="form-label">Youtube video link</label>
+        <input asp-for="linkVideo" class="form-control" type="text"/>
+    </div>
+    <br />
     @if (Model.Location != null)
     {
         <partial name="MapShow" model="Model.Location" />
         <div>
-            <a class="btn btn-outline-primary" href="/Posts/DeleteLocation/@Model.Id">Sterge Locatia</a>
+            <a class="btn btn-outline-primary" asp-controller="Posts" asp-action="DeleteLocation" asp-route-id="@Model.Id">Delete location</a>
         </div>
     }
     else{
@@ -60,14 +66,30 @@
             <partial name="MapEdit" model="Model"></partial>
         </div>
 
-         <div>
-            <a id="addLocation" class="btn btn-outline-primary">Adauga Locatia</a>
+        <div>
+            <a id="addLocation" class="btn btn-outline-primary">Add location</a>
         </div>
 
     }
      <br />
 
-    <button class="btn btn-success" type="submit">Salveaza</button>
+     <div class="d-flex justify-content-between">
+        <!-- Buton Save -->
+        <button class="btn btn-success" type="submit">Save</button>
+
+        <!-- Formular pentru Stergere -->
+        <form method="post" asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Id">
+            <button class="btn btn-danger" type="submit">Delete Post</button>
+        </form>
+    </div>
+
+
+
+    @* <button class="btn btn-success" type="submit">Save</button> *@
+    @* <form method="post" asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Id"> *@
+    @* <button type="submit">Sterge postarea</button> *@
+    @* </form> *@
+<br />
 </form>
 
    

@@ -1,5 +1,12 @@
 ﻿@model ProiectDAW.Models.Post
 
+@if (ViewBag.Buttons == true)
+{
+    <div>
+        <a class="btn btn-outline-primary" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">Edit Post</a>
+    </div>
+}
+
 @if (TempData["msg"] != null)
 {
     <div class="alert alert-danger" role="alert" @TempData["msgType"]>@TempData["msg"]</div>
@@ -19,6 +26,6 @@
 <partial name="commentsShow" model="Model" /> @* COMENTARII-> afisare + adaugare*@
 
 <br />
-<div>
-    <a class="btn btn-outline-primary" asp-controller="Posts" asp-action="Index"><i class="bi bi-pencil-square"></i>Back to posts</a>
-</div>
+@* <div> *@
+@*     <a class="btn btn-outline-primary" asp-controller="Posts" asp-action="Index"><i class="bi bi-pencil-square"></i>Back to posts</a> *@
+@* </div> *@

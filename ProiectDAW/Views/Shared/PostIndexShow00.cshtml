@@ -1,0 +1,74 @@
+﻿
+
+<div><i class="bi bi-person">@Model.User.UserName</i></div>
+<br />
+<br />
+
+<p>@Model.Description</p>
+<p>@Model.Date</p>
+<br />
+
+@* Adresa *@
+@if (Model.Location != null)
+{
+    <div>
+        <p>@Model.Location.Address</p>
+    </div>
+}
+<br />
+
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/Show/@Model.Id"><i class="bi bi-pencil-square"></i>Afiseaza postare</a>
+</div>
+<div>
+    <a class="btn btn-outline-primary" href="/Posts/Edit/@Model.Id"><i class="bi bi-pencil-square"></i>Editeaza postare</a>
+</div>
+
+@* imaginea *@
+@if (!string.IsNullOrEmpty(Model.Image)) 
+{
+    @if (Model.Image.Contains(".mp4") || Model.Image.Contains(".mov"))
+    {
+        <video width="550" height="300" controls> <source src="@Model.Image" type="video/mp4"> Your browser does not support the video tag. </video>
+    }
+    else
+    {
+        <img src="@Model.Image" alt="Image" style="width: 100%; height: 450px; object-fit: cover" />
+    }
+}
+<br />
+
+@* video*@
+@if (!string.IsNullOrEmpty(Model.linkVideo))
+{
+    @* <iframe width="560" height="315" src="https://www.youtube.com/embed/SqcY0GlETPk?si =VrZYZbaC3y9rpPyx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> *@
+
+    <div class="video-container">
+        @Html.Raw(Model.linkVideo)
+    </div>
+   
+}
+
+<form method="post" action="/Posts/Delete/@Model.Id">
+    <button type="submit">Sterge postarea</button>
+</form>
+<br />
+
+@if (TempData[Model.Id.ToString()] == "2") 
+{
+    <form method="post" asp-controller="Posts" asp-action="Like" asp-route-id="@Model.Id"> 
+         <button type="submit">Unlike</button> 
+     </form> 
+ }
+ else 
+ { 
+     <form method="post" asp-controller="Posts" asp-action="Like" asp-route-id="@Model.Id"> 
+        <button type="submit">Like</button> 
+     </form> 
+ }
+
+<h3>@Model.Likes Likes</h3>
+<hr />
+
+
+
