@@ -94,9 +94,18 @@
 
             <div class="col-lg-4 col-sm-12">
 
-                <div class="image_5">
-                    <img src="~/images/img-5.png" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 100px;"> 
-                </div>
+                @if (Model.User.ProfilePic != null)
+                {
+					<div class="image_5">
+						<img src="@Model.User.ProfilePic" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 100px;">
+					</div>
+                }
+                else
+                {
+					<div class="image_5">
+						<img src="~/images/img-5.png" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 100px;">
+					</div>
+                }
 
                 <h1 class="about_taital">@Model.User.UserName</h1>
                 <p class="about_text">@Model.User.Description</p>

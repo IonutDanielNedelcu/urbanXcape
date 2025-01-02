@@ -51,18 +51,44 @@
 
 <br />
 
-<div>
-        <a class="btn btn-outline-primary" asp-controller="Groups" asp-action="NewGroupPost" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Add post</a>
-</div>
-
-<br />
-
-@if (Model.Posts != null)
+@if (Model.ModeratorId == ViewBag.CurrentUser)
 {
-    @foreach (var post in Model.Posts)
-    {
-        <partial name="PostIndexShow" model="post" />
-    }
+    @foreach (var request in Model.GroupRequests)
+		{
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">@request.User.UserName</h5>
+					<a class="btn btn-success" asp-controller="Groups" asp-action="Accept" asp-route-idGroup="@Model.Id" asp-route-idUser="@request.UserId">Accept</a>
+					<a class="btn btn-danger" asp-controller="Groups" asp-action="Reject" asp-route-idGroup="@Model.Id" asp-route-idUser="@request.UserId">Reject</a>
+				</div>
+			</div>
+		}
 }
 
 <br />
+
+@if (ViewBag.IsMember == true)
+{
+        <div>
+            <a class="btn btn-outline-primary" asp-controller="Groups" asp-action="NewGroupPost" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Add post</a>
+        </div>
+
+        <br />
+
+        @if (Model.Posts != null)
+        {
+            @foreach (var post in Model.Posts)
+            {
+                <partial name="PostIndexShow" model="post" />
+            }
+        }
+
+        <br />
+}
+else
+	{
+		<div>
+			<a class="btn btn-outline-primary" asp-controller="Groups" asp-action="Join" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Join group</a>
+		</div>
+	}
+

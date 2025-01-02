@@ -14,14 +14,54 @@
         </div>
 }
 
+<form method="GET">
+
+    <div>
+        <input type="text" class="form-control" placeholder="Look for someone" name="search"
+            value="@ViewBag.SearchString">
+        </input>
+        <button class="btn btn-outline-success" type="submit">
+            Search
+        </button>
+    </div>
+
+</form>
+
 
 @foreach (var applicationUser in ViewBag.ApplicationUsers)
 {
-        <div class="container">
-            <div class="card-body">
-            <h3 class="card-title"><a class="text-decoration-none" asp-controller="ApplicationUsers" asp-action="Show" asp-route-id="@applicationUser.Id">@applicationUser.UserName</a></h3>
+    <div class="container">
+        <div class="card-body">
+            <h3 class="card-title">
+                <a class="text-decoration-none" asp-controller="ApplicationUsers" asp-action="Show" asp-route-id="@applicationUser.Id">@applicationUser.UserName</a>
+            </h3>
             <h2>@applicationUser.FirstName @applicationUser.LastName</h2>
             <p class="card-text">@applicationUser.Description<p />
-            </div>
         </div>
+    </div>
+
+    @if (TempData[applicationUser.Id.ToString()] == "1")
+    {
+        @* unfollow pt request *@
+        <form method="post" asp-controller="ApplicationUsers" asp-action="Unfollow" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
+            <button type="submit" class="custom-button">Requested</button>
+            <p class="ms-2"><i class="bi person-arms-up"></i> @applicationUser.FollowersCount Followers</p>
+        </form>
+    }
+    else if (TempData[applicationUser.Id.ToString()] == "2")
+    {
+        @* unfollow pt following *@
+        <form method="post" asp-controller="ApplicationUsers" asp-action="Unfollow" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
+            <button type="submit" class="custom-button">Following</button>
+            <p class="ms-2"><i class="bi person-arms-up"></i> @applicationUser.FollowersCount Followers</p>
+        </form>
+    }
+    else
+    {
+		@* follow *@
+        <form method="post" asp-controller="ApplicationUsers" asp-action="Follow" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
+            <button type="submit" class="custom-button">Follow</button>
+            <p class="ms-2"><i class="bi person-arms-up"></i> @applicationUser.FollowersCount Followers</p>
+        </form>
+    }
 }

@@ -45,7 +45,7 @@
     </div>
 </div>
 
-@if (Model.Privacy == false || ViewBag.IsCurrentUser)
+@if (Model.Privacy == false || ViewBag.IsCurrentUser || ViewBag.IsFollowing)
 {
     <div class="card">
         <h2>Posts</h2>
@@ -70,4 +70,43 @@ else
 	<p>This user has a private profile</p>
 
 }
+@if (ViewBag.IsCurrentUser)
+{
+    <button class="btn btn-outline-primary">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Manage Account</a>
+    </button>
 
+    <div class="card">
+        <h2>Follow requests</h2>
+        <br />
+        @if (ViewBag.Requests != null)
+        {
+            @foreach (var follower in ViewBag.Requests)
+            {
+                <div class="card">
+                    <div class="card-body">
+						<h3 class="card-title about_img">
+							<a class="text-decoration-none" asp-controller="ApplicationUsers" asp-action="Show" asp-route-id="@follower.FollowerId">@follower.Follower.UserName</a>
+						</h3>
+						<br />
+						<h2>@follower.Follower.FirstName &nbsp; @follower.Follower.LastName</h2>
+						<br />
+						<p class="card-text">@follower.Follower.Description<p />
+						<br />
+                        <form method="post" asp-controller="ApplicationUsers" asp-action="Accept" asp-route-id="@follower.FollowerId">
+                            <button type="submit" class="btn btn-success">Accept</button>
+						</form>
+						<form method="post" asp-controller="ApplicationUsers" asp-action="Decline" asp-route-id="@follower.FollowerId">
+							<button type="submit" class="btn btn-danger">Decline</button>
+						</form>
+					</div>
+				</div>
+            }
+		}
+		else
+		{
+			<p>No follow requests found</p>
+		}
+		<br />
+	</div>
+}

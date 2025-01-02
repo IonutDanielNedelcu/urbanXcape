@@ -37,20 +37,29 @@ namespace ProiectDAW.Controllers
             return View();
         }
 
-        // details of a group
+
         [Authorize(Roles = "User,Admin")]
         public IActionResult Show(int id)
         {
             Group group = db.Groups
-                .Include(g => g.Posts)
-                .Include(g => g.Moderator)
-                .Where(gr => gr.Id == id)
-                .First();
+                .Include("Posts")
+                .Include("Moderator")
+                .Include("GroupRequests")
+                .Include("GroupRequests.User")
+                .Include("UserGroups")
+                .Include("UserGroups.User")
+                .FirstOrDefault(gr => gr.Id == id);
 
-            SetAccessRights();
+            if (group == null)
+            {
+                return NotFound(); // or handle the case appropriately
+            }
+
+            SetAccessRights(group.Id);
 
             return View(group);
         }
+
 
         // add a new group
         public IActionResult New()
@@ -123,7 +132,7 @@ namespace ProiectDAW.Controllers
 
                     TempData["message"] = "Group was edited!";
                     db.SaveChanges();
-                    
+
                     return RedirectToAction("Show", new { id = group.Id });
                 }
                 else
@@ -172,12 +181,22 @@ namespace ProiectDAW.Controllers
 
         }
 
-        private void SetAccessRights()
+        private void SetAccessRights(int id)
         {
             ViewBag.ShowButtons = false;
-            if (User.IsInRole("Admin") || User.IsInRole("Editor"))
+            if (User.IsInRole("Admin"))
             {
                 ViewBag.ShowButtons = true;
+            }
+
+            int cnt = db.UserGroups
+                .Where(ug => ug.UserId == _userManager.GetUserId(User))
+                .Where(ug => ug.GroupId == id)
+                .Count();
+
+            if(cnt > 0)
+            {
+                ViewBag.IsMember = true;
             }
 
             ViewBag.CurrentUser = _userManager.GetUserId(User);
@@ -207,5 +226,54 @@ namespace ProiectDAW.Controllers
             return View("/Views/Posts/New.cshtml", post);
         }
 
+        public IActionResult Join(int id)
+        {
+            string? currentUserId = _userManager.GetUserId(User);
+            GroupRequest groupRequest = new GroupRequest
+            {
+                UserId = currentUserId,
+                GroupId = id
+            };
+            db.GroupRequests.Add(groupRequest);
+            db.SaveChanges();
+            TempData["message"] = "Request was sent!";
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Accept(string idUser, int idGroup)
+        {
+            ApplicationUser applicationUser = db.ApplicationUsers.Find(idUser);
+            Group group = db.Groups.Find(idGroup);
+
+            GroupRequest groupRequest = db.GroupRequests.FirstOrDefault(gr => gr.UserId == idUser && gr.GroupId == idGroup);
+
+            if (groupRequest != null && group.ModeratorId == _userManager.GetUserId(User))
+            {
+                db.GroupRequests.Remove(groupRequest);
+                UserGroup userGroup = new UserGroup
+                {
+                    UserId = idUser,
+                    GroupId = idGroup
+                };
+                db.UserGroups.Add(userGroup);
+            }
+            db.SaveChanges();
+            TempData["message"] = "Request was accepted!";
+            return RedirectToAction("Show", new { id = idGroup });
+        }
+
+        public IActionResult Reject(string idUser, int idGroup)
+        {
+            ApplicationUser application = db.ApplicationUsers.Find(idUser);
+            Group group = db.Groups.Find(idGroup);
+            GroupRequest groupRequest = db.GroupRequests.FirstOrDefault(gr => gr.UserId == idUser && gr.GroupId == idGroup);
+            if (groupRequest != null && group.ModeratorId == _userManager.GetUserId(User))
+            {
+                db.GroupRequests.Remove(groupRequest);
+            }
+            db.SaveChanges();
+            TempData["message"] = "Request was rejected!";
+            return RedirectToAction("Show", new { id = idGroup });
+        }
     }
 }

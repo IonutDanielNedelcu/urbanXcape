@@ -32,6 +32,8 @@ wwwroot\images\banner-bg.png
 wwwroot\images\banner-img.png
 wwwroot\images\call-icon.png
 wwwroot\images\contact-img.png
+wwwroot\images\d26eba0e-84ee-4b25-88a8-ee172386cdec.jpg
+wwwroot\images\download (1).jpg
 wwwroot\images\fb-icon.png
 wwwroot\images\fb-icon-1.png
 wwwroot\images\footer-logo.png
