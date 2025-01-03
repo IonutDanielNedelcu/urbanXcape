@@ -226,6 +226,32 @@ namespace ProiectDAW.Controllers
             return View("/Views/Posts/New.cshtml", post);
         }
 
+        public IActionResult Members(int id)
+        {
+            var group = db.Groups.Find(id);
+
+            var users = db.ApplicationUsers
+                          .Where(u => u.UserGroups.Any(ug => ug.GroupId == id) && u.Id != group.ModeratorId);
+
+            ViewBag.GroupUsersCount = users.Count();
+            ViewBag.GroupInfo = db.Groups.Find(id);
+            ViewBag.GroupUsers = users;
+
+            return View();
+        }
+
+        public IActionResult RemoveMember(int idGroup, string idUser)
+        {
+            UserGroup userGroup = db.UserGroups.FirstOrDefault(ug => ug.GroupId == idGroup && ug.UserId == idUser);
+            if (userGroup != null)
+            {
+                db.UserGroups.Remove(userGroup);
+                db.SaveChanges();
+            }
+            TempData["message"] = "User was removed!";
+            return RedirectToAction("Members", new { id = idGroup });
+        }
+
         public IActionResult Join(int id)
         {
             string? currentUserId = _userManager.GetUserId(User);

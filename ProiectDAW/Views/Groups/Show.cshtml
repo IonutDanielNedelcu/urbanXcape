@@ -53,6 +53,11 @@
 
 @if (Model.ModeratorId == ViewBag.CurrentUser)
 {
+    <div>
+			<a class="btn btn-outline-primary" asp-controller="Groups" asp-action="Members" asp-route-id="@Model.Id"><i class="bi bi-person"></i>Members</a>
+    </div>
+
+		<h2>Requests</h2>
     @foreach (var request in Model.GroupRequests)
 		{
 			<div class="card">

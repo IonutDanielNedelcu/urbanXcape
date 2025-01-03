@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="about_section layout_padding">
+    <div class="container">
+
+		<div class="row">
+			<div class="col-lg-8 col-sm-12">
+
+				<div class="about_text">
+					<h1>@ViewBag.GroupInfo.Name</h1>
+					<br />
+					<p>@ViewBag.GroupInfo.Description</p>
+					<br />
+					<p class="text-center">Here you can see the members of the group</p>
+				</div>
+
+				<div class="about_taital">
+					<h2>Members</h2>
+					<br />
+					@foreach (var user in ViewBag.GroupUsers)
+					{
+						<div class="row">
+							<div class="col-lg-2 col-sm-12">
+								<img src="~/Images/user.png" alt="user" />
+							</div>
+							<div class="col-lg-10 col-sm-12">
+								<h3>@user.FirstName @user.LastName</h3>
+								<p>@user.Email</p>
+							</div>
+						</div>
+						<br />
+
+						<form method="post" asp-controller="Groups" asp-action="RemoveMember" asp-route-idGroup="@ViewBag.GroupInfo.Id" asp-route-idUser="@user.Id">
+							<button type="submit" class="btn btn-danger">Remove</button>
+						</form>
+					}
+				</div>
+			</div>
+		</div>
+
+            
+    </div>
+</div>

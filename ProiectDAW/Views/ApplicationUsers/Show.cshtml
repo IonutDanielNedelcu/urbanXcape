@@ -2,6 +2,12 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    if(TempData["message"] != null)
+	{
+		<div class="alert alert-success">
+			@TempData["message"]
+		</div>
+	}
 }
 @using System.Security.Claims
 @model ProiectDAW.Models.ApplicationUser
@@ -36,7 +42,7 @@
 
         <h3 class="card-title">@Model.UserName</h3>
         <br />
-        <h2class="card-title">@Model.FirstName &nbsp; @Model.LastName</h2>
+        <h2 class="card-title">@Model.FirstName &nbsp; @Model.LastName</h2>
         <br />
         <p class="card-text">@Model.Description<p />
             <br />
