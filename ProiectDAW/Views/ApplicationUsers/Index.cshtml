@@ -4,6 +4,11 @@
 @{
 }
 <br />
+<br />
+<br />
+<br />
+<br />
+
 <h2 class="text-center">Users</h2>
 <br />
 
@@ -16,17 +21,25 @@
 
 <form method="GET">
 
-    <div>
+    <div class="">
         <input type="text" class="form-control" placeholder="Look for someone" name="search"
             value="@ViewBag.SearchString">
         </input>
-        <button class="btn btn-outline-success" type="submit">
-            Search
+        <br />
+        @* <button class="btn send_text2" type="submit"> *@
+        @*     Search *@
+        @* </button> *@
+        
+        <button class="send_text2" type="submit">
+            <a class="btn btn-success" style="color: white">Search</a>
         </button>
+
     </div>
 
 </form>
 
+<br />
+<hr />
 
 @foreach (var applicationUser in ViewBag.ApplicationUsers)
 {
@@ -43,25 +56,41 @@
     @if (TempData[applicationUser.Id.ToString()] == "1")
     {
         @* unfollow pt request *@
+        <p class="ms-1">@applicationUser.FollowersCount Followers</p>
         <form method="post" asp-controller="ApplicationUsers" asp-action="Unfollow" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
-            <button type="submit" class="custom-button">Requested</button>
-            <p class="ms-2"><i class="bi person-arms-up"></i> @applicationUser.FollowersCount Followers</p>
+            <button class="send_text2" type="submit">
+                <a class="btn btn-success" style="color: white">Requested</a>
+            </button>
         </form>
     }
     else if (TempData[applicationUser.Id.ToString()] == "2")
     {
         @* unfollow pt following *@
+        <p class="ms-1">@applicationUser.FollowersCount Followers</p>
         <form method="post" asp-controller="ApplicationUsers" asp-action="Unfollow" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
-            <button type="submit" class="custom-button">Following</button>
-            <p class="ms-2"><i class="bi person-arms-up"></i> @applicationUser.FollowersCount Followers</p>
+            <button class="send_text2" type="submit">
+                <a class="btn btn-success" style="color: white">Following</a>
+            </button>
         </form>
     }
     else
     {
 		@* follow *@
+        <p class="ms-1">@applicationUser.FollowersCount Followers</p>
         <form method="post" asp-controller="ApplicationUsers" asp-action="Follow" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
-            <button type="submit" class="custom-button">Follow</button>
-            <p class="ms-2"><i class="bi person-arms-up"></i> @applicationUser.FollowersCount Followers</p>
+            <button class="send_text2" type="submit">
+                <a class="btn btn-success" style="color: white">Follow</a>
+            </button>
         </form>
     }
+
+    @if( ViewBag.IsAdmin == true)
+	{
+        <br />
+		<form method="post" asp-controller="ApplicationUsers" asp-action="Delete" asp-route-id="@applicationUser.Id" class="d-flex align-items-center">
+			<button class="send_text2" type="submit">
+				<a class="btn btn-danger" style="color: white">Delete User</a>
+			</button>
+		</form>
+	}
 }

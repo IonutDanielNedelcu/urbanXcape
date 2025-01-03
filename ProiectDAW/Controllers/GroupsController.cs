@@ -70,7 +70,7 @@ namespace ProiectDAW.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Editor,Admin")]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult New(Group group)
         {
             // Assuming you have a way to get the current user's ID
@@ -96,7 +96,7 @@ namespace ProiectDAW.Controllers
 
 
         // edit a group
-        [Authorize(Roles = "User,Editor,Admin")]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Edit(int id)
         {
             Group group = db.Groups
@@ -118,7 +118,7 @@ namespace ProiectDAW.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User,Editor,Admin")]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Edit(int id, Group requestGroup)
         {
             Group group = db.Groups.Find(id);
@@ -148,15 +148,16 @@ namespace ProiectDAW.Controllers
             }
         }
 
-        // delete a group
-        [HttpPost]
-        [Authorize(Roles = "User,Editor,Admin")]
+        
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Delete(int id)
         {
             Group group = db.Groups
-                .Where(gr => gr.Id == id)
-                .First();
-
+                .FirstOrDefault(gr => gr.Id == id);
+            if (group == null)
+            {
+                return NotFound();
+            }
             if ((group.ModeratorId == _userManager.GetUserId(User)) || User.IsInRole("Admin"))
             {
                 // delete all user groups connections to this group
@@ -165,7 +166,6 @@ namespace ProiectDAW.Controllers
                 db.GroupRequests.RemoveRange(db.GroupRequests.Where(gr => gr.GroupId == id));
                 // delete all posts in this group
                 db.Posts.RemoveRange(db.Posts.Where(p => p.GroupId == id));
-
                 db.Groups.Remove(group);
                 db.SaveChanges();
                 TempData["message"] = "Group was deleted!";
@@ -177,9 +177,8 @@ namespace ProiectDAW.Controllers
                 TempData["messageType"] = "alert-danger";
                 return RedirectToAction("Show", new { id = group.Id });
             }
-
-
         }
+
 
         private void SetAccessRights(int id)
         {
@@ -226,6 +225,7 @@ namespace ProiectDAW.Controllers
             return View("/Views/Posts/New.cshtml", post);
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Members(int id)
         {
             var group = db.Groups.Find(id);
@@ -240,10 +240,12 @@ namespace ProiectDAW.Controllers
             return View();
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult RemoveMember(int idGroup, string idUser)
         {
             UserGroup userGroup = db.UserGroups.FirstOrDefault(ug => ug.GroupId == idGroup && ug.UserId == idUser);
-            if (userGroup != null)
+            Group group = db.Groups.Find(idGroup);
+            if (userGroup != null && (idUser == _userManager.GetUserId(User) || group.ModeratorId == _userManager.GetUserId(User) || User.IsInRole("Admin")))
             {
                 db.UserGroups.Remove(userGroup);
                 db.SaveChanges();
@@ -252,6 +254,7 @@ namespace ProiectDAW.Controllers
             return RedirectToAction("Members", new { id = idGroup });
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Join(int id)
         {
             string? currentUserId = _userManager.GetUserId(User);
@@ -260,12 +263,21 @@ namespace ProiectDAW.Controllers
                 UserId = currentUserId,
                 GroupId = id
             };
+            
+            bool isAlreadySent = db.GroupRequests.Any(gr => gr.UserId == currentUserId && gr.GroupId == id);
+            
+            if (isAlreadySent)
+            {
+                TempData["message"] = "Request was already sent!";
+                return RedirectToAction("Index");
+            }
             db.GroupRequests.Add(groupRequest);
             db.SaveChanges();
             TempData["message"] = "Request was sent!";
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Accept(string idUser, int idGroup)
         {
             ApplicationUser applicationUser = db.ApplicationUsers.Find(idUser);
@@ -288,6 +300,7 @@ namespace ProiectDAW.Controllers
             return RedirectToAction("Show", new { id = idGroup });
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Reject(string idUser, int idGroup)
         {
             ApplicationUser application = db.ApplicationUsers.Find(idUser);

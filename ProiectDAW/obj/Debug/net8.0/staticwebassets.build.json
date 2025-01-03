@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vaX2oyWxOfYJ0XaY1ShjZlhJqDuTep1daXb00BdMMd8=",
+  "Hash": "yaP05J84coGfGSXgfdvXlZXnCwiVFsdYvILzhNhRhKs=",
   "Source": "ProiectDAW",
   "BasePath": "_content/ProiectDAW",
   "Mode": "Default",
@@ -1879,8 +1879,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b6s3620ycn",
-      "Integrity": "ncBxFoRo1e2zUaPOAHrhgXJKoJlgNZJQ/dfmLM8DJEA=",
+      "Fingerprint": "al8mu1u1js",
+      "Integrity": "/nbgdGBd6Y45q1JuxeLhCpUrSpY92Ybfbp4YcrDwJfM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
@@ -6372,7 +6372,7 @@
       ]
     },
     {
-      "Route": "css/style.b6s3620ycn.css",
+      "Route": "css/style.al8mu1u1js.css",
       "AssetFile": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\wwwroot\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6382,7 +6382,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18588"
+          "Value": "18917"
         },
         {
           "Name": "Content-Type",
@@ -6390,11 +6390,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ncBxFoRo1e2zUaPOAHrhgXJKoJlgNZJQ/dfmLM8DJEA=\""
+          "Value": "\"/nbgdGBd6Y45q1JuxeLhCpUrSpY92Ybfbp4YcrDwJfM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 18:19:37 GMT"
+          "Value": "Fri, 03 Jan 2025 21:09:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6404,7 +6404,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b6s3620ycn"
+          "Value": "al8mu1u1js"
         },
         {
           "Name": "label",
@@ -6412,7 +6412,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ncBxFoRo1e2zUaPOAHrhgXJKoJlgNZJQ/dfmLM8DJEA="
+          "Value": "sha256-/nbgdGBd6Y45q1JuxeLhCpUrSpY92Ybfbp4YcrDwJfM="
         }
       ]
     },
@@ -6427,7 +6427,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18588"
+          "Value": "18917"
         },
         {
           "Name": "Content-Type",
@@ -6435,11 +6435,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ncBxFoRo1e2zUaPOAHrhgXJKoJlgNZJQ/dfmLM8DJEA=\""
+          "Value": "\"/nbgdGBd6Y45q1JuxeLhCpUrSpY92Ybfbp4YcrDwJfM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Jan 2025 18:19:37 GMT"
+          "Value": "Fri, 03 Jan 2025 21:09:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6449,7 +6449,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ncBxFoRo1e2zUaPOAHrhgXJKoJlgNZJQ/dfmLM8DJEA="
+          "Value": "sha256-/nbgdGBd6Y45q1JuxeLhCpUrSpY92Ybfbp4YcrDwJfM="
         }
       ]
     },

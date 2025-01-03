@@ -16,12 +16,18 @@
 <div class="container">
     @if (ViewBag.IsCurrentUser)
     {
-        <button class="btn btn-outline-primary">
-            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity?.Name</a>
+        @* <button class="btn btn-outline-primary"> *@
+        @*     <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity?.Name</a> *@
+        @* </button> *@
+
+        <button class="send_text2">
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" class="btn btn-success">Manage Account</a>
         </button>
+
     }
     <br />
-    <button class="btn btn-success">
+
+    <button class="send_text2">
         <a asp-controller="ApplicationUsers" asp-action="Index" class="btn btn-success">Back to users</a>
     </button>
 </div>
@@ -78,9 +84,6 @@ else
 }
 @if (ViewBag.IsCurrentUser)
 {
-    <button class="btn btn-outline-primary">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Manage Account</a>
-    </button>
 
     <div class="card">
         <h2>Follow requests</h2>

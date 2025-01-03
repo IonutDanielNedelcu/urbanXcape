@@ -3,11 +3,19 @@
 *@
 
 @using System.Security.Claims
+
+
 @model ProiectDAW.Models.Group
-<br />
 
 <div class="container">
-    <button class="btn btn-success">
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <button class="send_text2">
         <a asp-controller="Groups" asp-action="Index" class="btn btn-success">Back to groups</a>
     </button>
 </div>
@@ -33,38 +41,56 @@
 
         @if (Model.ModeratorId == ViewBag.CurrentUser)
         {
-            <button class="btn btn-success">
+            <button class="send_text2">
+                <a asp-controller="Groups" asp-action="Members" asp-route-id="@Model.Id" class="btn btn-success">Members</a>
+            </button>
+            <button class="send_text2">
                 <a asp-controller="Groups" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Edit Group</a>
             </button>
         }
         @if (Model.ModeratorId == ViewBag.CurrentUser || ViewBag.IsAdmin == true)
         {
-            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this group?');">
+            <button class="send_text2">
                 <a asp-controller="Groups" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete Group</a>
             </button>
         }
             
 
-       <div/>
-
+   </div>
 </div>
 
 <br />
 
+@if (ViewBag.IsMember == true)
+{
+    @if (ViewBag.CurrentUser != Model.ModeratorId)
+    {
+        <button class="send_text2">
+            <a asp-controller="Groups" asp-action="RemoveMember" asp-route-idGroup="@Model.Id" asp-route-idUser="@ViewBag.CurrentUserId" class="btn btn-success">Leave group</a>
+        </button>
+    }
+    <button class="send_text2">
+        <a asp-controller="Groups" asp-action="NewGroupPost" asp-route-id="@Model.Id" class="btn btn-success">Add post</a>
+    </button>
+
+    <br />
+}
+
 @if (Model.ModeratorId == ViewBag.CurrentUser)
 {
-    <div>
-			<a class="btn btn-outline-primary" asp-controller="Groups" asp-action="Members" asp-route-id="@Model.Id"><i class="bi bi-person"></i>Members</a>
-    </div>
-
-		<h2>Requests</h2>
+    <br />
+    <h2>Requests</h2>
     @foreach (var request in Model.GroupRequests)
 		{
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">@request.User.UserName</h5>
-					<a class="btn btn-success" asp-controller="Groups" asp-action="Accept" asp-route-idGroup="@Model.Id" asp-route-idUser="@request.UserId">Accept</a>
-					<a class="btn btn-danger" asp-controller="Groups" asp-action="Reject" asp-route-idGroup="@Model.Id" asp-route-idUser="@request.UserId">Reject</a>
+                    <button class="send_text2">
+                        <a class="btn btn-success" asp-controller="Groups" asp-action="Accept" asp-route-idGroup="@Model.Id" asp-route-idUser="@request.UserId">Accept</a>
+                    </button>
+                    <button class="send_text2">
+                        <a class="btn btn-success" asp-controller="Groups" asp-action="Reject" asp-route-idGroup="@Model.Id" asp-route-idUser="@request.UserId">Reject</a>
+                    </button>
 				</div>
 			</div>
 		}
@@ -74,12 +100,6 @@
 
 @if (ViewBag.IsMember == true)
 {
-        <div>
-            <a class="btn btn-outline-primary" asp-controller="Groups" asp-action="NewGroupPost" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Add post</a>
-        </div>
-
-        <br />
-
         @if (Model.Posts != null)
         {
             @foreach (var post in Model.Posts)
@@ -91,9 +111,10 @@
         <br />
 }
 else
-	{
-		<div>
-			<a class="btn btn-outline-primary" asp-controller="Groups" asp-action="Join" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Join group</a>
+{
+    <div class="send_text2">
+        <a  class="btn btn-success" asp-controller="Groups" asp-action="Join" asp-route-id="@Model.Id">Join group</a>
 		</div>
-	}
-
+}
+<br />
+<br />

@@ -1067,3 +1067,20 @@ textarea#comment::placeholder {
 .margin_top_90 {
     margin-top: 90px;
 }
+
+.send_text2 a {
+    float: left;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #021239;
+    text-align: center;
+    padding: 6px 10px;
+    font-weight: 500;
+    border: 2px solid #021239;
+}
+
+.send_text2 a:hover {
+    color: #000;
+    background-color: #ffffff;
+    border: 2px solid #b4b4b4;
+}

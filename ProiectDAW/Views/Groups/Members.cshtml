@@ -4,6 +4,19 @@
 @{
 }
 
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+	<button class="send_text2">
+		<a asp-controller="Groups" asp-action="Show" asp-route-id="@ViewBag.GroupInfo.Id" class="btn btn-success">Back to group</a>
+	</button>
+</div>
+
+<br />
 
 <div class="about_section layout_padding">
     <div class="container">
@@ -33,7 +46,6 @@
 								<p>@user.Email</p>
 							</div>
 						</div>
-						<br />
 
 						<form method="post" asp-controller="Groups" asp-action="RemoveMember" asp-route-idGroup="@ViewBag.GroupInfo.Id" asp-route-idUser="@user.Id">
 							<button type="submit" class="btn btn-danger">Remove</button>

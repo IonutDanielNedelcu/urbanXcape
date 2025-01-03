@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
@@ -19,6 +20,8 @@ namespace ProiectDAW.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
+
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Index()
         {
             var applicationUsers = db.ApplicationUsers
@@ -57,6 +60,8 @@ namespace ProiectDAW.Controllers
                 }
             }
 
+
+            ViewBag.IsAdmin = _userManager.IsInRoleAsync(_userManager.FindByIdAsync(_userManager.GetUserId(User)).Result, "Admin").Result;
             ViewBag.SearchString = search;
             ViewBag.ApplicationUsers = applicationUsers
                 .Include(u => u.Followers)
@@ -74,6 +79,7 @@ namespace ProiectDAW.Controllers
             return View();
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Show(string id)
         {
             ApplicationUser? applicationUser = db.ApplicationUsers
@@ -103,7 +109,7 @@ namespace ProiectDAW.Controllers
             return View(applicationUser);
         }
 
-
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Follow(string id)
         {
             ApplicationUser? applicationUser = db.ApplicationUsers.Find(id);
@@ -127,6 +133,7 @@ namespace ProiectDAW.Controllers
             return Redirect("/ApplicationUsers/Index/");
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Unfollow(string id)
         {
             ApplicationUser? applicationUser = db.ApplicationUsers.Find(id);
@@ -140,6 +147,7 @@ namespace ProiectDAW.Controllers
             return Redirect("/ApplicationUsers/Index/");
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Accept(string id)
         {
             ApplicationUser? applicationUser = db.ApplicationUsers.Find(id);
@@ -153,6 +161,7 @@ namespace ProiectDAW.Controllers
             return Redirect("/ApplicationUsers/Index/");
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Reject(string id)
         {
             ApplicationUser? applicationUser = db.ApplicationUsers.Find(id);
@@ -162,6 +171,19 @@ namespace ProiectDAW.Controllers
             }
             FollowRequest followRequest = db.FollowRequests.FirstOrDefault(f => f.FollowerId == id && f.FollowedId == _userManager.GetUserId(User));
             db.FollowRequests.Remove(followRequest);
+            db.SaveChanges();
+            return Redirect("/ApplicationUsers/Index/");
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult Delete(string id)
+        {
+            ApplicationUser? applicationUser = db.ApplicationUsers.Find(id);
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+            db.ApplicationUsers.Remove(applicationUser);
             db.SaveChanges();
             return Redirect("/ApplicationUsers/Index/");
         }
