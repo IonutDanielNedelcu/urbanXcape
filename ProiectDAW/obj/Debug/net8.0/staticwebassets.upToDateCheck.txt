@@ -30,6 +30,7 @@ wwwroot\images\467970241_1517129425657273_7344895004273702161_n.jpg
 wwwroot\images\about-img.png
 wwwroot\images\banner-bg.png
 wwwroot\images\banner-img.png
+wwwroot\images\blank-profile-picture-973460_1280.png
 wwwroot\images\call-icon.png
 wwwroot\images\contact-img.png
 wwwroot\images\d26eba0e-84ee-4b25-88a8-ee172386cdec.jpg
@@ -58,6 +59,7 @@ wwwroot\images\Screenshot 2024-12-06 115511.png
 wwwroot\images\Screenshot 2024-12-06 115648.png
 wwwroot\images\Screenshot 2024-12-06 115842.png
 wwwroot\images\Screenshot 2024-12-06 223750.png
+wwwroot\images\Screenshot 2024-12-18 193912.png
 wwwroot\images\serach-icon.png
 wwwroot\images\twitter-icon.png
 wwwroot\images\twitter-icon-1.png

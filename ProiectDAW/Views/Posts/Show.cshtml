@@ -4,8 +4,20 @@
 {
     <div>
         <a class="btn btn-outline-primary" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">Edit Post</a>
+        <br />
+        <!-- Formular pentru Stergere -->
+        <form method="post" asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Id">
+            <button class="btn btn-danger" type="submit">Delete Post</button>
+        </form>
     </div>
 }
+@if (ViewBag.Buttons1 == true)
+{
+    <form method="post" asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Id">
+        <button class="btn btn-danger" type="submit">Delete Post</button>
+    </form>
+}
+
 
 @if (TempData["msg"] != null)
 {

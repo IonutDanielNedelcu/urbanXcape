@@ -72,9 +72,20 @@ namespace ProiectDAW.Controllers
                                 .Where(post => post.Id == Id)
                                 .First();
             ViewBag.Buttons = false;
-            if (User.Identity.IsAuthenticated)
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    ViewBag.Buttons = true;
+            //}
+
+            if (post.UserId == _userManager.GetUserId(User)) //verificam daca userul curent este cel care a postat
             {
-                ViewBag.Buttons = true;
+                ViewBag.Buttons = true;                                    //User.IsInRole("Admin") - verifica daca userul este admin
+                return View(post);
+            }
+            else if (User.IsInRole("Admin")) //verificam daca userul curent este admin
+            {
+                ViewBag.Buttons1 = true;
+                return View(post);
             }
 
             //verificam daca userul curent a dat like la postare
@@ -261,6 +272,7 @@ namespace ProiectDAW.Controllers
                 ViewBag.Buttons = true;                                    //User.IsInRole("Admin") - verifica daca userul este admin
                 return View(post);
             }
+
             else
             {
                 
@@ -370,12 +382,18 @@ namespace ProiectDAW.Controllers
         [HttpPost]
         public IActionResult Delete(int Id)
         {
-            Post post = db.Posts.Include(p => p.Comments).FirstOrDefault(p => p.Id == Id);
+            Post post = db.Posts.Include(p => p.Comments)
+                                .Include(p => p.PostLikes)
+                                .FirstOrDefault(p => p.Id == Id);
 
-            if (post.UserId == _userManager.GetUserId(User))
+
+
+            if (post.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
                 //stergem comentariile postarii
                 db.Comments.RemoveRange(post.Comments);
+                // Delete likes of the post
+                db.PostLikes.RemoveRange(post.PostLikes);
 
                 db.Posts.Remove(post);
                 db.SaveChanges();
