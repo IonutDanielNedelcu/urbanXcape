@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\applicationusers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\applicationusers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\groups\\members.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\groups\\members.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\groups\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\groups\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\controllers\\applicationuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\controllers\\applicationuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\controllers\\applicationuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\controllers\\applicationuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\views\\applicationusers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|solutionrelative:proiectdaw\\views\\applicationusers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{455052E1-7263-4056-8E12-E045888EC6EB}|ProiectDAW\\ProiectDAW.csproj|d:\\_dani\\university\\daw\\_proiect\\proiect-daw\\proiectdaw\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +46,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "ProiectDAW\\ScaffoldingReadMe.txt",
+              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "ProiectDAW\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-05T11:09:41.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T11:09:41.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs*",
+              "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwCMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T11:09:41.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Members.cshtml",
+              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Groups\\Members.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Groups\\Members.cshtml",
+              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Groups\\Members.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Groups\\Members.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T22:15:38.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -42,25 +110,35 @@
               "RelativeToolTip": "ProiectDAW\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ViewState": "AgIAAJkAAAAAAAAAAAArwLEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T22:11:35.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T22:11:35.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ApplicationUsersController.cs",
               "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Controllers\\ApplicationUsersController.cs",
               "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\ApplicationUsersController.cs",
               "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Controllers\\ApplicationUsersController.cs",
               "RelativeToolTip": "ProiectDAW\\Controllers\\ApplicationUsersController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAvwBcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAjwBcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T22:08:24.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T22:08:24.645Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Show.cshtml",
+              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Groups\\Show.cshtml",
+              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Groups\\Show.cshtml",
+              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Groups\\Show.cshtml",
+              "RelativeToolTip": "ProiectDAW\\Views\\Groups\\Show.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T21:46:37.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GroupsController.cs",
               "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Controllers\\GroupsController.cs",
               "RelativeDocumentMoniker": "ProiectDAW\\Controllers\\GroupsController.cs",
@@ -68,25 +146,11 @@
               "RelativeToolTip": "ProiectDAW\\Controllers\\GroupsController.cs",
               "ViewState": "AgIAANAAAAAAAAAAAAAAwJYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T21:48:42.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T21:48:42.196Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Groups\\Show.cshtml",
-              "RelativeDocumentMoniker": "ProiectDAW\\Views\\Groups\\Show.cshtml",
-              "ToolTip": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\Groups\\Show.cshtml",
-              "RelativeToolTip": "ProiectDAW\\Views\\Groups\\Show.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T21:46:37.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
               "RelativeDocumentMoniker": "ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
@@ -94,8 +158,7 @@
               "RelativeToolTip": "ProiectDAW\\Views\\ApplicationUsers\\Index.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAAAkwD8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T21:43:15.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T21:43:15.595Z"
             }
           ]
         }
