@@ -8358,23 +8358,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Dragos\\.nuget\\packages\\": {},
+    "D:\\_DANI\\Programe\\Visual Studio 2022 Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
+      "projectUniqueName": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
       "projectName": "ProiectDAW",
-      "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Proiect-DAW\\ProiectDAW\\obj\\",
+      "projectPath": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\ProiectDAW.csproj",
+      "packagesPath": "C:\\Users\\Dragos\\.nuget\\packages\\",
+      "outputPath": "D:\\_DANI\\University\\DAW\\_PROIECT\\Proiect-DAW\\ProiectDAW\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\_DANI\\Programe\\Visual Studio 2022 Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dragos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

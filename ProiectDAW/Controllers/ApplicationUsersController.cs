@@ -21,7 +21,6 @@ namespace ProiectDAW.Controllers
             _roleManager = roleManager;
         }
 
-        [Authorize(Roles = "User,Admin")]
         public IActionResult Index()
         {
             var applicationUsers = db.ApplicationUsers
@@ -47,15 +46,15 @@ namespace ProiectDAW.Controllers
                     .OrderBy(user => user.UserName);
             }
 
-            //verificam daca userul curent a dat like la postari
             foreach (var appUser in applicationUsers)
             {
+                //verificam daca userul curent a dat like la postari
                 FollowRequest? followRequest = appUser.Followers.FirstOrDefault(u => u.FollowerId == _userManager.GetUserId(User));
                 if (followRequest != null)
                 {
                     if (followRequest.Accepted == false)
                         TempData[appUser.Id.ToString()] = "1";
-                    else if(followRequest.Accepted == true)
+                    else if (followRequest.Accepted == true)
                         TempData[appUser.Id.ToString()] = "2";
                 }
             }
@@ -75,11 +74,11 @@ namespace ProiectDAW.Controllers
                     u.ProfilePic,
                     FollowersCount = u.Followers.Where(f => f.Accepted == true).Count()
                 }).ToList();
+            ViewBag.CurrentUserId = _userManager.GetUserId(User);
 
             return View();
         }
 
-        [Authorize(Roles = "User,Admin")]
         public IActionResult Show(string id)
         {
             ApplicationUser? applicationUser = db.ApplicationUsers
@@ -175,6 +174,7 @@ namespace ProiectDAW.Controllers
             return Redirect("/ApplicationUsers/Index/");
         }
 
+        [HttpPost]
         [Authorize(Roles = "Admin")]
         public IActionResult Delete(string id)
         {
@@ -187,6 +187,44 @@ namespace ProiectDAW.Controllers
             db.SaveChanges();
             return Redirect("/ApplicationUsers/Index/");
         }
-    }
 
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> MakeAdmin(string idUser)
+        {
+            ApplicationUser? applicationUser = await _userManager.FindByIdAsync(idUser);
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            var result = await _userManager.AddToRoleAsync(applicationUser, "Admin");
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            return Redirect("/ApplicationUsers/Index/");
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> RemoveAdmin(string idUser)
+        {
+            ApplicationUser? applicationUser = await _userManager.FindByIdAsync(idUser);
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            var result = await _userManager.RemoveFromRoleAsync(applicationUser, "Admin");
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            return Redirect("/ApplicationUsers/Index/");
+        }
+
+    }
 }

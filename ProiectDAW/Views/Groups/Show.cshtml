@@ -50,9 +50,11 @@
         }
         @if (Model.ModeratorId == ViewBag.CurrentUser || ViewBag.IsAdmin == true)
         {
-            <button class="send_text2">
-                <a asp-controller="Groups" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete Group</a>
-            </button>
+            <form method="post" asp-controller="Groups" asp-action="Delete" asp-route-id="@Model.Id" class="d-flex align-items-center">
+                <button class="send_text2" type="submit">
+                    <a class="btn btn-danger" style="color: white">Delete Group</a>
+                </button>
+            </form>
         }
             
 

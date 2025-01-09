@@ -45,6 +45,18 @@
 {
     <div class="container">
         <div class="card-body">
+            @if (applicationUser.ProfilePic != null)
+            {
+                <div class="image_5">
+                    <img src="@applicationUser.ProfilePic" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 100px;">
+                </div>
+            }
+            else
+            {
+                <div class="image_5">
+                    <img src="~/images/blank-profile-picture-973460_1280.png" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 100px;">
+                </div>
+            }
             <h3 class="card-title">
                 <a class="text-decoration-none" asp-controller="ApplicationUsers" asp-action="Show" asp-route-id="@applicationUser.Id">@applicationUser.UserName</a>
             </h3>
@@ -93,4 +105,6 @@
 			</button>
 		</form>
 	}
+
+	<hr />
 }
