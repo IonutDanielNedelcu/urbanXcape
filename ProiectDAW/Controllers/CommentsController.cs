@@ -59,8 +59,9 @@ namespace ProiectDAW.Controllers
         public IActionResult Delete(int id)
         {   
             Comment comm = db.Comments.Find(id);
+            Post post = db.Posts.Find(comm.PostId);
 
-            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin") || post.UserId == _userManager.GetUserId(User))
             {
                 db.Comments.Remove(comm);
                 db.SaveChanges();

@@ -15,7 +15,8 @@
                         <strong><i class="bi bi-person"></i> @comm.User.UserName</strong>
 
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            @if (ViewBag.Buttons == true)
+                            @if (comm.User.Id == ViewBag.UserId || ViewBag.Buttons == true)
+                            @* @if (ViewBag.Buttons == true) *@
                             {
                                 <div>
                                     <a class="btn btn-outline-primary btn-sm" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i> Edit</a>

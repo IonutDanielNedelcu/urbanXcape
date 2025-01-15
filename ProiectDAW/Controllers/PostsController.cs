@@ -77,6 +77,8 @@ namespace ProiectDAW.Controllers
             //    ViewBag.Buttons = true;
             //}
 
+            ViewBag.UserId = _userManager.GetUserId(User);
+
             if (post.UserId == _userManager.GetUserId(User)) //verificam daca userul curent este cel care a postat
             {
                 ViewBag.Buttons = true;                                    //User.IsInRole("Admin") - verifica daca userul este admin
