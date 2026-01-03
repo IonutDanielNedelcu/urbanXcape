@@ -5,7 +5,7 @@ Demo social media app built with ASP.NET Core 8 MVC and EF Core.
 Features: posts (image/video/YouTube), comments, likes, follow system, groups, location tagging (Google Maps), and Identity-based roles.
 
 Tech: ASP.NET Core 8, Entity Framework Core, ASP.NET Identity, Razor Views, Bootstrap, jQuery.
-```markdown
+
 # ASP.NET Web Applications Development
 
 This workspace contains course and demo projects. The primary application is `ProiectDAW`, a social media demo named "Urban Xcape" implemented with ASP.NET Core MVC and Entity Framework Core.
